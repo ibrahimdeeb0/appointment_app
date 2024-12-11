@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "DocDoc Development",
+            "request": "launch",
+            "type": "dart",
+            // entery point for run app
+            "program": "lib/main_development.dart",
+            // to specify key for run command in terminal
+            "args": [
+                "--flavor",
+                "Development",
+                "--target",
+                // entery point for run app
+                "lib/main_development.dart"
+            ]
+        },
+        {
+            "name": "DocDoc Production",
+            "request": "launch",
+            "type": "dart",
+            // entery point for run app
+            "program": "lib/main_production.dart",
+            // to specify key for run command in terminal
+            "args": [
+                "--flavor",
+                "Production",
+                "--target",
+                "lib/main_production.dart"
+            ]
+        }
+    ],
+    "compounds": []
+}
