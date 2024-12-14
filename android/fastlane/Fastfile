@@ -22,11 +22,11 @@ platform :android do
     sh "flutter build apk --release --flavor production --target lib/main_production.dart --no-tree-shake-icons"
     firebase_app_distribution(
       app: "1:578190430760:android:e7017b5298bcf7c2289b1d",
-      firebase_cli_token: "1//09NpufF_nolLyCgYIARAAGAkSNwF-L9Ir6M6-q0TkISx13OdbG_DmCvu8MQnHybEvWMDMBs92Pxgw3qhOO0h0j78z6bTKZQnBCHc",
+      firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
       android_artifact_type: "APK",
       android_artifact_path: "../build/app/outputs/flutter-apk/app-production-release.apk",
       testers: "ibra05978@gmail.com", 
-      release_notes: "The first release"
+      release_notes: "Release version 1.0.1 to can test it."
     )
   end
 
