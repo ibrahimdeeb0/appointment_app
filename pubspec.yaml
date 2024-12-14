@@ -4,7 +4,7 @@ description: "A new Flutter project."
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
-version: 1.0.0+1
+version: 1.0.1+1
 
 environment:
   sdk: ^3.5.1
@@ -28,8 +28,10 @@ dependencies:
   retrofit: ^4.4.1
   retrofit_generator: ^9.1.4
   flutter_svg: ^2.0.10+1
+  firebase_core: ^3.8.1
 
 dev_dependencies:
+  build_runner: ^2.4.13
   flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
