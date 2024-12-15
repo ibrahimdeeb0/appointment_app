@@ -1,6 +1,6 @@
 import 'package:doctors_app/core/helpers/app_regex.dart';
 import 'package:doctors_app/core/helpers/spacing.dart';
-import 'package:doctors_app/core/theming/app_colors_manager.dart';
+import 'package:doctors_app/core/theming/app_colors.dart';
 import 'package:doctors_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctors_app/features/login/ui/widgets/password_validations.dart';
 import 'package:flutter/material.dart';
@@ -74,7 +74,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
               }),
               icon: Icon(
                 isObscureText ? Icons.visibility_off : Icons.visibility,
-                color: AppColorsManager.lightGray,
+                color: AppColors.lightGray,
               ),
             ),
             validator: (value) {

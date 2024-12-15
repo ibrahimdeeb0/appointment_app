@@ -4,7 +4,7 @@ import 'package:doctors_app/core/helpers/extensions.dart';
 import 'package:doctors_app/features/sign_up/logic/sign_up_cubit.dart';
 
 import '../../../../core/routing/routes.dart';
-import '../../../../core/theming/app_colors_manager.dart';
+import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_text_styles.dart';
 import '../../logic/sign_up_state.dart';
 
@@ -25,7 +25,7 @@ class SignupBlocListener extends StatelessWidget {
               context: context,
               builder: (context) => const Center(
                 child: CircularProgressIndicator(
-                  color: AppColorsManager.mainBlue,
+                  color: AppColors.mainBlue,
                 ),
               ),
             );

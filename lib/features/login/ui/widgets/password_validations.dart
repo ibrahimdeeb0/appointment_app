@@ -1,4 +1,4 @@
-import 'package:doctors_app/core/theming/app_colors_manager.dart';
+import 'package:doctors_app/core/theming/app_colors.dart';
 import 'package:doctors_app/core/theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -42,7 +42,7 @@ class PasswordValidations extends StatelessWidget {
       children: [
         const CircleAvatar(
           radius: 2.5,
-          backgroundColor: AppColorsManager.gray,
+          backgroundColor: AppColors.gray,
         ),
         horizontalSpace(6),
         Text(
@@ -51,9 +51,7 @@ class PasswordValidations extends StatelessWidget {
             decoration: hasValidated ? TextDecoration.lineThrough : null,
             decorationColor: Colors.green,
             decorationThickness: 2,
-            color: hasValidated
-                ? AppColorsManager.gray
-                : AppColorsManager.darkBlue,
+            color: hasValidated ? AppColors.gray : AppColors.darkBlue,
           ),
         )
       ],

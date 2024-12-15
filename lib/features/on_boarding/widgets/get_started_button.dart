@@ -1,6 +1,6 @@
 import 'package:doctors_app/core/helpers/extensions.dart';
 import 'package:doctors_app/core/routing/routes.dart';
-import 'package:doctors_app/core/theming/app_colors_manager.dart';
+import 'package:doctors_app/core/theming/app_colors.dart';
 import 'package:doctors_app/core/theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +15,7 @@ class GetStartedButton extends StatelessWidget {
       },
       style: ButtonStyle(
         backgroundColor:
-            const WidgetStatePropertyAll<Color>(AppColorsManager.mainBlue),
+            const WidgetStatePropertyAll<Color>(AppColors.mainBlue),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         minimumSize: const WidgetStatePropertyAll<Size>(
           Size(double.infinity, 52),

@@ -5,7 +5,7 @@ import 'package:doctors_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctors_app/features/login/logic/cubit/login_state.dart';
 
 import '../../../../core/routing/routes.dart';
-import '../../../../core/theming/app_colors_manager.dart';
+import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_text_styles.dart';
 
 class LoginBlocListener extends StatelessWidget {
@@ -23,7 +23,7 @@ class LoginBlocListener extends StatelessWidget {
               context: context,
               builder: (context) => const Center(
                 child: CircularProgressIndicator(
-                  color: AppColorsManager.mainBlue,
+                  color: AppColors.mainBlue,
                 ),
               ),
             );
