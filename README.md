@@ -70,17 +70,16 @@ The app is modularized into features, and each feature has an independent struct
    ```bash
    flutter pub get
 2. **Generate required files:** 
-  Use the following command to generate freezed and retrofit files:
-  ```bash
+   Use the following command to generate freezed and retrofit files:
+   ```bash
    flutter pub run build_runner build --delete-conflicting-outputs
-  ```
+   ```
 2. **flutter run:** 
    ```bash
-    flutter run
+   flutter run
    ```
 ---
 
-#🗂️ Folder Structure
 ## 🗂️ Folder Structure
 
 ```plaintext
