@@ -4,7 +4,7 @@ import 'package:doctors_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/helpers/spacing.dart';
-import '../../../core/theming/styles.dart';
+import '../../../core/theming/app_text_styles.dart';
 import '../../../core/widgets/app_text_button.dart';
 
 import 'widgets/dont_have_account_text.dart';

@@ -1,5 +1,5 @@
-import 'package:doctors_app/core/theming/colors.dart';
-import 'package:doctors_app/core/theming/styles.dart';
+import 'package:doctors_app/core/theming/app_colors_manager.dart';
+import 'package:doctors_app/core/theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/helpers/spacing.dart';
@@ -42,7 +42,7 @@ class PasswordValidations extends StatelessWidget {
       children: [
         const CircleAvatar(
           radius: 2.5,
-          backgroundColor: ColorsManager.gray,
+          backgroundColor: AppColorsManager.gray,
         ),
         horizontalSpace(6),
         Text(
@@ -51,7 +51,9 @@ class PasswordValidations extends StatelessWidget {
             decoration: hasValidated ? TextDecoration.lineThrough : null,
             decorationColor: Colors.green,
             decorationThickness: 2,
-            color: hasValidated ? ColorsManager.gray : ColorsManager.darkBlue,
+            color: hasValidated
+                ? AppColorsManager.gray
+                : AppColorsManager.darkBlue,
           ),
         )
       ],

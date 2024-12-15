@@ -1,4 +1,4 @@
-import 'package:doctors_app/core/theming/colors.dart';
+import 'package:doctors_app/core/theming/app_colors_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -31,7 +31,7 @@ class AppTextButton extends StatelessWidget {
       onPressed: onPressed,
       style: ButtonStyle(
         backgroundColor: WidgetStatePropertyAll<Color>(
-            backgroundColor ?? ColorsManager.mainBlue),
+            backgroundColor ?? AppColorsManager.mainBlue),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         padding: WidgetStatePropertyAll<EdgeInsets>(
           EdgeInsets.symmetric(
