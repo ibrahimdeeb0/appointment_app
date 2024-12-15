@@ -1,5 +1,5 @@
-import 'package:doctors_app/core/theming/colors.dart';
-import 'package:doctors_app/core/theming/styles.dart';
+import 'package:doctors_app/core/theming/app_colors_manager.dart';
+import 'package:doctors_app/core/theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -42,7 +42,7 @@ class AppTextFormField extends StatelessWidget {
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                color: ColorsManager.mainBlue,
+                color: AppColorsManager.mainBlue,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(16.0),
@@ -50,7 +50,7 @@ class AppTextFormField extends StatelessWidget {
         enabledBorder: enabledBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                color: ColorsManager.lighterGray,
+                color: AppColorsManager.lighterGray,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(16.0),
@@ -72,7 +72,7 @@ class AppTextFormField extends StatelessWidget {
         hintStyle: hintStyle ?? AppTextStyles.font14LightGrayRegular,
         hintText: hintText,
         suffixIcon: suffixIcon,
-        fillColor: backgroundColor ?? ColorsManager.moreLighterGray,
+        fillColor: backgroundColor ?? AppColorsManager.moreLighterGray,
         filled: true,
       ),
       obscureText: isObscureText ?? false,

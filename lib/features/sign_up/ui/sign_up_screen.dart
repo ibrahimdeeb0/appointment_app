@@ -5,7 +5,7 @@ import 'package:doctors_app/features/sign_up/ui/widgets/sign_up_form.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/helpers/spacing.dart';
-import '../../../core/theming/styles.dart';
+import '../../../core/theming/app_text_styles.dart';
 import '../../../core/widgets/app_text_button.dart';
 import '../logic/sign_up_cubit.dart';
 import 'widgets/already_have_account_text.dart';
