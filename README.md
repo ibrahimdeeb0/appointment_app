@@ -64,22 +64,6 @@ The app is modularized into features, and each feature has an independent struct
 
 ---
 
-## 🚀 How to Run the Project
-
-1. **Install dependencies:**  
-   ```bash
-   flutter pub get
-2. **Generate required files:** 
-   Use the following command to generate freezed and retrofit files:
-   ```bash
-   flutter pub run build_runner build --delete-conflicting-outputs
-   ```
-2. **flutter run:** 
-   ```bash
-   flutter run
-   ```
----
-
 ## 🗂️ Folder Structure
 
 ```plaintext
