@@ -43,6 +43,12 @@ dependencies:
   flutter_screenutil: ^5.9.3
   # firebase library
   firebase_core: ^3.8.1
+  # reading and writing simple key-value pairs
+  shared_preferences: ^2.3.3
+  # Flutter library to load and cache network images.
+  cached_network_image: ^3.4.1
+  # provides API to store data in secure storage.
+  flutter_secure_storage: ^9.2.2
 
 dev_dependencies:
   #A build system for Dart code generation and modular compilation
