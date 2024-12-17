@@ -23,6 +23,10 @@ extension Navigation on BuildContext {
   void pop() => Navigator.pop(this);
 }
 
+extension StringExtension on String? {
+  bool isNullOrEmpty() => this == null || this == "";
+}
+
 extension Sizing on BuildContext {
   double flexHeight() => MediaQuery.sizeOf(this).height;
   double flexWidth() => MediaQuery.sizeOf(this).width;
