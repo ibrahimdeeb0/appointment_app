@@ -23,7 +23,7 @@ mixin _$HomeState {
     required TResult Function(
             SpecializationsResponseModel specializationsResponseModel)
         specializationsSuccess,
-    required TResult Function(ErrorHandler errorHandler) specializationsError,
+    required TResult Function(ApiErrorModel apiErrorModel) specializationsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -33,7 +33,7 @@ mixin _$HomeState {
     TResult? Function(
             SpecializationsResponseModel specializationsResponseModel)?
         specializationsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? specializationsError,
+    TResult? Function(ApiErrorModel apiErrorModel)? specializationsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,7 +42,7 @@ mixin _$HomeState {
     TResult Function()? specializationsLoading,
     TResult Function(SpecializationsResponseModel specializationsResponseModel)?
         specializationsSuccess,
-    TResult Function(ErrorHandler errorHandler)? specializationsError,
+    TResult Function(ApiErrorModel apiErrorModel)? specializationsError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -141,7 +141,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(
             SpecializationsResponseModel specializationsResponseModel)
         specializationsSuccess,
-    required TResult Function(ErrorHandler errorHandler) specializationsError,
+    required TResult Function(ApiErrorModel apiErrorModel) specializationsError,
   }) {
     return initial();
   }
@@ -154,7 +154,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(
             SpecializationsResponseModel specializationsResponseModel)?
         specializationsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? specializationsError,
+    TResult? Function(ApiErrorModel apiErrorModel)? specializationsError,
   }) {
     return initial?.call();
   }
@@ -166,7 +166,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? specializationsLoading,
     TResult Function(SpecializationsResponseModel specializationsResponseModel)?
         specializationsSuccess,
-    TResult Function(ErrorHandler errorHandler)? specializationsError,
+    TResult Function(ApiErrorModel apiErrorModel)? specializationsError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -268,7 +268,7 @@ class _$SpecializationsLoadingImpl implements SpecializationsLoading {
     required TResult Function(
             SpecializationsResponseModel specializationsResponseModel)
         specializationsSuccess,
-    required TResult Function(ErrorHandler errorHandler) specializationsError,
+    required TResult Function(ApiErrorModel apiErrorModel) specializationsError,
   }) {
     return specializationsLoading();
   }
@@ -281,7 +281,7 @@ class _$SpecializationsLoadingImpl implements SpecializationsLoading {
     TResult? Function(
             SpecializationsResponseModel specializationsResponseModel)?
         specializationsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? specializationsError,
+    TResult? Function(ApiErrorModel apiErrorModel)? specializationsError,
   }) {
     return specializationsLoading?.call();
   }
@@ -293,7 +293,7 @@ class _$SpecializationsLoadingImpl implements SpecializationsLoading {
     TResult Function()? specializationsLoading,
     TResult Function(SpecializationsResponseModel specializationsResponseModel)?
         specializationsSuccess,
-    TResult Function(ErrorHandler errorHandler)? specializationsError,
+    TResult Function(ApiErrorModel apiErrorModel)? specializationsError,
     required TResult orElse(),
   }) {
     if (specializationsLoading != null) {
@@ -370,10 +370,10 @@ class __$$SpecializationsSuccessImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? specializationsResponseModel = freezed,
+    Object? specializationsResponseModel = null,
   }) {
     return _then(_$SpecializationsSuccessImpl(
-      freezed == specializationsResponseModel
+      null == specializationsResponseModel
           ? _value.specializationsResponseModel
           : specializationsResponseModel // ignore: cast_nullable_to_non_nullable
               as SpecializationsResponseModel,
@@ -399,14 +399,14 @@ class _$SpecializationsSuccessImpl implements SpecializationsSuccess {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SpecializationsSuccessImpl &&
-            const DeepCollectionEquality().equals(
-                other.specializationsResponseModel,
-                specializationsResponseModel));
+            (identical(other.specializationsResponseModel,
+                    specializationsResponseModel) ||
+                other.specializationsResponseModel ==
+                    specializationsResponseModel));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(specializationsResponseModel));
+  int get hashCode => Object.hash(runtimeType, specializationsResponseModel);
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -425,7 +425,7 @@ class _$SpecializationsSuccessImpl implements SpecializationsSuccess {
     required TResult Function(
             SpecializationsResponseModel specializationsResponseModel)
         specializationsSuccess,
-    required TResult Function(ErrorHandler errorHandler) specializationsError,
+    required TResult Function(ApiErrorModel apiErrorModel) specializationsError,
   }) {
     return specializationsSuccess(specializationsResponseModel);
   }
@@ -438,7 +438,7 @@ class _$SpecializationsSuccessImpl implements SpecializationsSuccess {
     TResult? Function(
             SpecializationsResponseModel specializationsResponseModel)?
         specializationsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? specializationsError,
+    TResult? Function(ApiErrorModel apiErrorModel)? specializationsError,
   }) {
     return specializationsSuccess?.call(specializationsResponseModel);
   }
@@ -450,7 +450,7 @@ class _$SpecializationsSuccessImpl implements SpecializationsSuccess {
     TResult Function()? specializationsLoading,
     TResult Function(SpecializationsResponseModel specializationsResponseModel)?
         specializationsSuccess,
-    TResult Function(ErrorHandler errorHandler)? specializationsError,
+    TResult Function(ApiErrorModel apiErrorModel)? specializationsError,
     required TResult orElse(),
   }) {
     if (specializationsSuccess != null) {
@@ -519,7 +519,7 @@ abstract class _$$SpecializationsErrorImplCopyWith<$Res> {
           $Res Function(_$SpecializationsErrorImpl) then) =
       __$$SpecializationsErrorImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({ErrorHandler errorHandler});
+  $Res call({ApiErrorModel apiErrorModel});
 }
 
 /// @nodoc
@@ -535,13 +535,13 @@ class __$$SpecializationsErrorImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? errorHandler = null,
+    Object? apiErrorModel = null,
   }) {
     return _then(_$SpecializationsErrorImpl(
-      null == errorHandler
-          ? _value.errorHandler
-          : errorHandler // ignore: cast_nullable_to_non_nullable
-              as ErrorHandler,
+      null == apiErrorModel
+          ? _value.apiErrorModel
+          : apiErrorModel // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
     ));
   }
 }
@@ -549,14 +549,14 @@ class __$$SpecializationsErrorImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SpecializationsErrorImpl implements SpecializationsError {
-  const _$SpecializationsErrorImpl(this.errorHandler);
+  const _$SpecializationsErrorImpl(this.apiErrorModel);
 
   @override
-  final ErrorHandler errorHandler;
+  final ApiErrorModel apiErrorModel;
 
   @override
   String toString() {
-    return 'HomeState.specializationsError(errorHandler: $errorHandler)';
+    return 'HomeState.specializationsError(apiErrorModel: $apiErrorModel)';
   }
 
   @override
@@ -564,12 +564,12 @@ class _$SpecializationsErrorImpl implements SpecializationsError {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SpecializationsErrorImpl &&
-            (identical(other.errorHandler, errorHandler) ||
-                other.errorHandler == errorHandler));
+            (identical(other.apiErrorModel, apiErrorModel) ||
+                other.apiErrorModel == apiErrorModel));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, errorHandler);
+  int get hashCode => Object.hash(runtimeType, apiErrorModel);
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -589,9 +589,9 @@ class _$SpecializationsErrorImpl implements SpecializationsError {
     required TResult Function(
             SpecializationsResponseModel specializationsResponseModel)
         specializationsSuccess,
-    required TResult Function(ErrorHandler errorHandler) specializationsError,
+    required TResult Function(ApiErrorModel apiErrorModel) specializationsError,
   }) {
-    return specializationsError(errorHandler);
+    return specializationsError(apiErrorModel);
   }
 
   @override
@@ -602,9 +602,9 @@ class _$SpecializationsErrorImpl implements SpecializationsError {
     TResult? Function(
             SpecializationsResponseModel specializationsResponseModel)?
         specializationsSuccess,
-    TResult? Function(ErrorHandler errorHandler)? specializationsError,
+    TResult? Function(ApiErrorModel apiErrorModel)? specializationsError,
   }) {
-    return specializationsError?.call(errorHandler);
+    return specializationsError?.call(apiErrorModel);
   }
 
   @override
@@ -614,11 +614,11 @@ class _$SpecializationsErrorImpl implements SpecializationsError {
     TResult Function()? specializationsLoading,
     TResult Function(SpecializationsResponseModel specializationsResponseModel)?
         specializationsSuccess,
-    TResult Function(ErrorHandler errorHandler)? specializationsError,
+    TResult Function(ApiErrorModel apiErrorModel)? specializationsError,
     required TResult orElse(),
   }) {
     if (specializationsError != null) {
-      return specializationsError(errorHandler);
+      return specializationsError(apiErrorModel);
     }
     return orElse();
   }
@@ -664,10 +664,10 @@ class _$SpecializationsErrorImpl implements SpecializationsError {
 }
 
 abstract class SpecializationsError implements HomeState {
-  const factory SpecializationsError(final ErrorHandler errorHandler) =
+  const factory SpecializationsError(final ApiErrorModel apiErrorModel) =
       _$SpecializationsErrorImpl;
 
-  ErrorHandler get errorHandler;
+  ApiErrorModel get apiErrorModel;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
