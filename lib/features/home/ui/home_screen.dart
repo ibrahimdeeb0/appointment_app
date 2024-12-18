@@ -1,4 +1,7 @@
+import 'package:doctors_app/core/helpers/extensions.dart';
+import 'package:doctors_app/core/helpers/shared_pref_helper.dart';
 import 'package:doctors_app/core/helpers/spacing.dart';
+import 'package:doctors_app/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,6 +17,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          context.pushReplacementNamed(Routes.loginScreen);
+          SharedPrefHelper.clearAllData();
+          SharedPrefHelper.clearAllSecuredData();
+        },
+      ),
       body: SafeArea(
         child: Container(
           width: double.infinity,
