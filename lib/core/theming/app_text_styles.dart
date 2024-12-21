@@ -153,4 +153,10 @@ class AppTextStyles {
     color: AppColors.gray,
     fontWeight: FontWeightHelper.medium,
   );
+
+  static TextStyle font14DarkBlueBold = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.darkBlue,
+    fontWeight: FontWeightHelper.bold,
+  );
 }
