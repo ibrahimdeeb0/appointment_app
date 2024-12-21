@@ -3,7 +3,7 @@ import 'package:doctors_app/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'core/helpers/constants.dart';
+import 'core/constants/constants.dart';
 
 class DocApp extends StatelessWidget {
   final AppRouter appRouter;

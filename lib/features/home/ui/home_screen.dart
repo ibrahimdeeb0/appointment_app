@@ -1,14 +1,14 @@
-import 'package:doctors_app/core/helpers/extensions.dart';
-import 'package:doctors_app/core/helpers/shared_pref_helper.dart';
-import 'package:doctors_app/core/helpers/spacing.dart';
-import 'package:doctors_app/core/routing/routes.dart';
+// import 'package:doctors_app/core/helpers/extensions.dart';
+// import 'package:doctors_app/core/helpers/shared_pref_helper.dart';
+// import 'package:doctors_app/core/routing/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:doctors_app/core/helpers/spacing.dart';
 
 import 'widgets/doctors_blue_container.dart';
+import 'widgets/doctors_list/doctors_bloc_builder.dart';
 import 'widgets/doctors_specialty_see_all.dart';
 import 'widgets/home_top_bar.dart';
-import 'widgets/specializations_and_doctors_bloc_builder.dart';
+import 'widgets/specializations_list/specializations_bloc_builder.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,13 +17,14 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      floatingActionButton: FloatingActionButton(
+      // signout button
+      /* floatingActionButton: FloatingActionButton(
         onPressed: () {
           context.pushReplacementNamed(Routes.loginScreen);
           SharedPrefHelper.clearAllData();
           SharedPrefHelper.clearAllSecuredData();
         },
-      ),
+      ), */
       body: SafeArea(
         child: Container(
           width: double.infinity,
@@ -37,10 +38,12 @@ class HomeScreen extends StatelessWidget {
             children: [
               const HomeTopBar(),
               const DoctorsBlueContainer(),
-              verticalSpace(20.h),
+              verticalSpace(20),
               const DoctorsSpecialtySeeAll(),
               verticalSpace(18),
-              const SpecializationsAndDoctorsBlocBuilder(),
+              const SpecializationsBlocBuilder(),
+              verticalSpace(8),
+              const DoctorsBlocBuilder(),
             ],
           ),
         ),
