@@ -1,8 +1,10 @@
 import 'package:doctors_app/core/helpers/extensions.dart';
-import 'package:doctors_app/core/routing/routes.dart';
 import 'package:doctors_app/core/theming/app_colors.dart';
 import 'package:doctors_app/core/theming/app_text_styles.dart';
+
 import 'package:flutter/material.dart';
+
+import '../../login/ui/routes.dart';
 
 class GetStartedButton extends StatelessWidget {
   const GetStartedButton({super.key});
@@ -11,7 +13,7 @@ class GetStartedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {
-        context.pushNamed(Routes.loginScreen);
+        context.pushReplacementNamed(LoginRoutes.login);
       },
       style: ButtonStyle(
         backgroundColor:

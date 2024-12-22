@@ -1,5 +1,7 @@
 import 'package:doctors_app/core/di/dependency_injection.dart';
 import 'package:doctors_app/doc_app.dart';
+import 'package:doctors_app/features/home/ui/routes.dart';
+import 'package:doctors_app/features/login/ui/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,21 +13,23 @@ import 'core/helpers/extensions.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   setupGetIt();
-  // To fix texts being hidden bug in flutter_screenutil in release mode.
+
+  // Ensure flutter_screenutil works correctly in release mode.
   await ScreenUtil.ensureScreenSize();
-  await checkIfLoggedInUser();
+
+  // Check login status
+  String initialRoute = await getInitialRoute();
 
   runApp(DocApp(
     appRouter: AppRouter(),
+    initialRoute: initialRoute,
   ));
 }
 
-checkIfLoggedInUser() async {
+Future<String> getInitialRoute() async {
   String? userToken =
       await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
-  if (!userToken.isNullOrEmpty()) {
-    isLoggedInUser = true;
-  } else {
-    isLoggedInUser = false;
-  }
+
+  // Return the initial route based on login status
+  return !(userToken.isNullOrEmpty()) ? HomeRoutes.home : LoginRoutes.login;
 }

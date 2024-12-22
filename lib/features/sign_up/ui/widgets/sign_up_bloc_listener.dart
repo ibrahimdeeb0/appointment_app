@@ -4,9 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:doctors_app/core/helpers/extensions.dart';
 import 'package:doctors_app/features/sign_up/logic/sign_up_cubit.dart';
 
-import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_text_styles.dart';
+import '../../../login/ui/routes.dart';
 import '../../logic/sign_up_state.dart';
 
 class SignupBlocListener extends StatelessWidget {
@@ -65,7 +65,7 @@ class SignupBlocListener extends StatelessWidget {
                 disabledForegroundColor: Colors.grey.withOpacity(0.38),
               ),
               onPressed: () {
-                context.pushNamed(Routes.loginScreen);
+                context.pushReplacementNamed(LoginRoutes.login);
               },
               child: const Text('Continue'),
             ),

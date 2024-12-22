@@ -5,9 +5,9 @@ import 'package:doctors_app/core/helpers/extensions.dart';
 import 'package:doctors_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctors_app/features/login/logic/cubit/login_state.dart';
 
-import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_text_styles.dart';
+import '../../../home/ui/routes.dart';
 
 class LoginBlocListener extends StatelessWidget {
   const LoginBlocListener({super.key});
@@ -16,7 +16,9 @@ class LoginBlocListener extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocListener<LoginCubit, LoginState>(
       listenWhen: (previous, current) =>
-          current is LoginLoading || current is LoginSuccess || current is LoginError,
+          current is LoginLoading ||
+          current is LoginSuccess ||
+          current is LoginError,
       listener: (context, state) {
         state.whenOrNull(
           loginLoading: () {
@@ -31,10 +33,10 @@ class LoginBlocListener extends StatelessWidget {
           },
           loginSuccess: (loginResponse) {
             context.pop();
-            context.pushNamed(Routes.homeScreen);
+            context.pushReplacementNamed(HomeRoutes.home);
           },
           loginError: (apiErrorModel) {
-           setupErrorState(context, apiErrorModel);
+            setupErrorState(context, apiErrorModel);
           },
         );
       },
