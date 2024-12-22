@@ -5,16 +5,24 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
+import 'package:doctors_app/core/constants/constants.dart';
+import 'package:doctors_app/core/helpers/extensions.dart';
+import 'package:doctors_app/core/helpers/shared_pref_helper.dart';
 import 'package:doctors_app/core/routing/app_router.dart';
 import 'package:doctors_app/doc_app.dart';
+import 'package:doctors_app/features/home/ui/routes.dart';
+import 'package:doctors_app/features/login/ui/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    String initialRoute = await getInitialRoute();
+
     // Build our app and trigger a frame.
     await tester.pumpWidget(DocApp(
       appRouter: AppRouter(),
+      initialRoute: initialRoute,
     ));
 
     // Verify that our counter starts at 0.
@@ -29,4 +37,12 @@ void main() {
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
   });
+}
+
+Future<String> getInitialRoute() async {
+  String? userToken =
+      await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
+
+  // Return the initial route based on login status
+  return !(userToken.isNullOrEmpty()) ? HomeRoutes.home : LoginRoutes.login;
 }

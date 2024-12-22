@@ -38,8 +38,8 @@ class SpecialtyListViewItem extends StatelessWidget {
                     backgroundColor: AppColors.lightBlue,
                     child: Image.asset(
                       iconPath ?? 'assets/images/man_doctor_europe.png',
-                      height: 36.h,
-                      width: 36.w,
+                      height: 30.h,
+                      width: 30.w,
                     ),
                   ),
                 )
@@ -48,8 +48,8 @@ class SpecialtyListViewItem extends StatelessWidget {
                   backgroundColor: AppColors.lightBlue,
                   child: Image.asset(
                     iconPath ?? 'assets/images/man_doctor_europe.png',
-                    height: 36.h,
-                    width: 36.w,
+                    height: 30.h,
+                    width: 30.w,
                   ),
                 ),
           verticalSpace(8),
