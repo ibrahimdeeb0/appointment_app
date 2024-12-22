@@ -5,7 +5,7 @@ import 'package:doctors_app/features/sign_up/ui/routes.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
-  Route<dynamic> generateRoute(RouteSettings settings) {
+  Route? generateRoute(RouteSettings settings) {
     // onboarding Routes
     if (settings.name == OnboardingRoutes.onboarding) {
       return OnboardingRoutes.generateRoute(settings);
@@ -27,12 +27,6 @@ class AppRouter {
     }
 
     // Default: Undefined Route
-    return MaterialPageRoute(
-      builder: (_) => Scaffold(
-        body: Center(
-          child: Text('IIIII No route defined for ${settings.name}'),
-        ),
-      ),
-    );
+    return null;
   }
 }

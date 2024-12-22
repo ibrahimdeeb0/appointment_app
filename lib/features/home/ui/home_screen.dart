@@ -1,6 +1,6 @@
-import 'package:doctors_app/core/helpers/extensions.dart';
-import 'package:doctors_app/core/helpers/shared_pref_helper.dart';
-import 'package:doctors_app/features/login/ui/routes.dart';
+// import 'package:doctors_app/core/helpers/extensions.dart';
+// import 'package:doctors_app/core/helpers/shared_pref_helper.dart';
+// import 'package:doctors_app/features/login/ui/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:doctors_app/core/helpers/spacing.dart';
 
@@ -22,13 +22,13 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       // signout button
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          context.pushReplacementNamed(LoginRoutes.login);
-          SharedPrefHelper.clearAllData();
-          SharedPrefHelper.clearAllSecuredData();
-        },
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     context.pushReplacementNamed(LoginRoutes.login);
+      //     SharedPrefHelper.clearAllData();
+      //     SharedPrefHelper.clearAllSecuredData();
+      //   },
+      // ),
       body: SafeArea(
         child: Container(
           width: double.infinity,
