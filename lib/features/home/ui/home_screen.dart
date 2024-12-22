@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
             20.0,
             16.0,
             20.0,
-            28.0,
+            0.0,
           ),
           child: Column(
             children: [

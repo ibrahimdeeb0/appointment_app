@@ -44,13 +44,15 @@ dependencies:
   # firebase library
   firebase_core: ^3.8.1
   # reading and writing simple key-value pairs
-  shared_preferences: ^2.3.3
+  shared_preferences: ^2.3.4
   # Flutter library to load and cache network images.
   cached_network_image: ^3.4.1
   # provides API to store data in secure storage.
   flutter_secure_storage: ^9.2.2
   # easy way to add shimmer effect
   shimmer: ^3.0.0
+  # show a convex tab in the bottom bar.
+  convex_bottom_bar: ^3.2.0
 
 dev_dependencies:
   #A build system for Dart code generation and modular compilation
