@@ -56,8 +56,8 @@ class _BottomNavState extends State<BottomNav> {
 
   @override
   Widget build(BuildContext context) {
-    final List<TabItem> tabItems = bottomNavItems.map((item) {
-      return TabItem(
+    final tabItems = bottomNavItems.map((item) {
+      return TabItem<SvgPicture>(
         icon: SvgPicture.asset(
           item['icon']!,
           colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),

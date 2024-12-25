@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:doctors_app/core/helpers/spacing.dart';
+import 'package:doctors_app/core/networking/api_error_model.dart';
+import 'package:doctors_app/core/widgets/app_dialog.dart';
 
 import '../../../logic/home_cubit.dart';
 import '../../../logic/home_state.dart';
@@ -13,13 +15,22 @@ class SpecializationsBlocBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<HomeCubit, HomeState>(
-      buildWhen: (previous, current) =>
-          current is SpecializationsLoading ||
-          current is SpecializationsSuccess ||
-          current is SpecializationsError,
-      builder: (context, state) {
-        return state.maybeWhen(
+    return BlocListener<HomeCubit, HomeState>(
+      listenWhen: (previous, current) => current is SpecializationsError,
+      listener: (context, state) {
+        state.maybeWhen(
+          specializationsError: (errorHandler) =>
+              setupError(context: context, errorHandler: errorHandler),
+          orElse: () => const SizedBox.shrink(),
+        );
+      },
+      child: BlocBuilder<HomeCubit, HomeState>(
+        buildWhen: (previous, current) =>
+            current is SpecializationsLoading ||
+            current is SpecializationsSuccess ||
+            current is SpecializationsError,
+        builder: (context, state) {
+          return state.maybeWhen(
             specializationsLoading: () {
               return setupLoading();
             },
@@ -27,11 +38,11 @@ class SpecializationsBlocBuilder extends StatelessWidget {
               var specializationsList = specializationDataList;
               return setupSuccess(specializationsList);
             },
-            specializationsError: (errorHandler) => setupError(),
-            orElse: () {
-              return const SizedBox.shrink();
-            });
-      },
+            specializationsError: (errorHandler) => const SizedBox.shrink(),
+            orElse: () => const SizedBox.shrink(),
+          );
+        },
+      ),
     );
   }
 
@@ -54,7 +65,26 @@ class SpecializationsBlocBuilder extends StatelessWidget {
     );
   }
 
-  Widget setupError() {
-    return const SizedBox.shrink();
+  Future<void> setupError({
+    required BuildContext context,
+    required ApiErrorModel errorHandler,
+  }) {
+    return AppDialog.show(
+      context: context,
+      title: 'Something Went Wrong!',
+      barrierDismissible: false,
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(errorHandler.message ?? 'An unknown error occurred.'),
+        ],
+      ),
+      actions: [
+        ElevatedButton(
+          onPressed: () => Navigator.of(context).pop(),
+          child: const Text('OK'),
+        ),
+      ],
+    );
   }
 }
