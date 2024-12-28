@@ -1,5 +1,5 @@
-import 'package:doctors_app/core/helpers/spacing.dart';
-import 'package:doctors_app/core/theming/app_colors.dart';
+import 'package:doctors_app/core/theme/app_colors.dart';
+import 'package:doctors_app/core/widgets/app_vertical_spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shimmer/shimmer.dart';
@@ -30,7 +30,7 @@ class DoctorsShimmerLoading extends StatelessWidget {
                     ),
                   ),
                 ),
-                horizontalSpace(16),
+                const VerticalSpacing(height: 16),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +47,7 @@ class DoctorsShimmerLoading extends StatelessWidget {
                           ),
                         ),
                       ),
-                      verticalSpace(12),
+                      const VerticalSpacing(height: 22),
                       Shimmer.fromColors(
                         baseColor: AppColors.lightGray,
                         highlightColor: Colors.white,
@@ -60,7 +60,7 @@ class DoctorsShimmerLoading extends StatelessWidget {
                           ),
                         ),
                       ),
-                      verticalSpace(12),
+                      const VerticalSpacing(height: 12),
                       Shimmer.fromColors(
                         baseColor: AppColors.lightGray,
                         highlightColor: Colors.white,

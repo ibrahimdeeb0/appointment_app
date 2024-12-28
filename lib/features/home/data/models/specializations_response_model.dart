@@ -56,5 +56,5 @@ class DoctorModel {
   });
 
   factory DoctorModel.fromJson(Map<String, dynamic> json) =>
-      _$DoctorsModelFromJson(json);
+      _$DoctorModelFromJson(json);
 }

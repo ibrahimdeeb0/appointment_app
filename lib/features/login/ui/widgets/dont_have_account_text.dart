@@ -1,5 +1,5 @@
 import 'package:doctors_app/core/helpers/extensions.dart';
-import 'package:doctors_app/core/theming/app_text_styles.dart';
+import 'package:doctors_app/core/theme/app_text_styles.dart';
 import 'package:doctors_app/features/sign_up/ui/routes.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';

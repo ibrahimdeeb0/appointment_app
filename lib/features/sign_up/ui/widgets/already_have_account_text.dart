@@ -2,7 +2,7 @@ import 'package:doctors_app/core/helpers/extensions.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/theming/app_text_styles.dart';
+import '../../../../core/theme/app_text_styles.dart';
 import '../../../login/ui/routes.dart';
 
 class AlreadyHaveAccountText extends StatelessWidget {

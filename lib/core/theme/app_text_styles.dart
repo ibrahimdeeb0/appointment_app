@@ -1,5 +1,5 @@
 import 'package:doctors_app/core/helpers/font_weight_helper.dart';
-import 'package:doctors_app/core/theming/app_colors.dart';
+import 'package:doctors_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -142,6 +142,12 @@ class AppTextStyles {
     fontWeight: FontWeightHelper.semiBold,
   );
 
+  static TextStyle font18WhiteSemiBold = TextStyle(
+    fontSize: 18.sp,
+    color: Colors.white,
+    fontWeight: FontWeightHelper.semiBold,
+  );
+
   static TextStyle font12DarkBlueRegular = TextStyle(
     fontSize: 12.sp,
     color: AppColors.darkBlue,
@@ -158,5 +164,17 @@ class AppTextStyles {
     fontSize: 14.sp,
     color: AppColors.darkBlue,
     fontWeight: FontWeightHelper.bold,
+  );
+
+  static TextStyle font14DarkBlueRegular = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.darkBlue,
+    fontWeight: FontWeightHelper.regular,
+  );
+
+  static TextStyle font20LightBlackSemiBold = TextStyle(
+    fontSize: 20.sp,
+    color: AppColors.lighterBlack,
+    fontWeight: FontWeightHelper.semiBold,
   );
 }

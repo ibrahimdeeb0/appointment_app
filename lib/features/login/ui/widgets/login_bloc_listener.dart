@@ -5,8 +5,8 @@ import 'package:doctors_app/core/helpers/extensions.dart';
 import 'package:doctors_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctors_app/features/login/logic/cubit/login_state.dart';
 
-import '../../../../core/theming/app_colors.dart';
-import '../../../../core/theming/app_text_styles.dart';
+import '../../../../core/theme/app_colors.dart';
+import '../../../../core/theme/app_text_styles.dart';
 import '../../../home/ui/routes.dart';
 
 class LoginBlocListener extends StatelessWidget {
