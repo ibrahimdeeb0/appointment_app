@@ -1,4 +1,4 @@
-import 'package:doctors_app/core/theming/app_text_styles.dart';
+import 'package:doctors_app/core/theme/app_text_styles.dart';
 import 'package:doctors_app/features/on_boarding/widgets/doc_logo_and_name.dart';
 import 'package:doctors_app/features/on_boarding/widgets/doctor_image_and_text.dart';
 import 'package:doctors_app/features/on_boarding/widgets/get_started_button.dart';

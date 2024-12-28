@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:doctors_app/core/helpers/spacing.dart';
-import 'package:doctors_app/core/theming/app_colors.dart';
-import 'package:doctors_app/core/theming/app_text_styles.dart';
+
+import 'package:doctors_app/core/widgets/app_vertical_spacing.dart';
+import 'package:doctors_app/core/theme/app_colors.dart';
+import 'package:doctors_app/core/theme/app_text_styles.dart';
 
 import '../../../data/models/specializations_response_model.dart';
 
@@ -49,7 +50,7 @@ class DoctorsListViewItem extends StatelessWidget {
               ),
             ),
           ),
-          horizontalSpace(16),
+          const VerticalSpacing(height: 16),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,12 +60,12 @@ class DoctorsListViewItem extends StatelessWidget {
                   style: AppTextStyles.font18DarkBlueBold,
                   overflow: TextOverflow.ellipsis,
                 ),
-                verticalSpace(5),
+                const VerticalSpacing(height: 5),
                 Text(
                   '${doctorModel?.degree} | ${doctorModel?.phone}',
                   style: AppTextStyles.font12GrayMedium,
                 ),
-                verticalSpace(5),
+                const VerticalSpacing(height: 5),
                 Text(
                   doctorModel?.email ?? 'Email',
                   style: AppTextStyles.font12GrayMedium,

@@ -4,8 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:doctors_app/core/helpers/extensions.dart';
 import 'package:doctors_app/features/sign_up/logic/sign_up_cubit.dart';
 
-import '../../../../core/theming/app_colors.dart';
-import '../../../../core/theming/app_text_styles.dart';
+import '../../../../core/theme/app_colors.dart';
+import '../../../../core/theme/app_text_styles.dart';
 import '../../../login/ui/routes.dart';
 import '../../logic/sign_up_state.dart';
 

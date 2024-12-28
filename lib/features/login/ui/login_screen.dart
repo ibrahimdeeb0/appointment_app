@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:doctors_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/helpers/spacing.dart';
-import '../../../core/theming/app_text_styles.dart';
-import '../../../core/widgets/app_text_button.dart';
+import 'package:doctors_app/core/theme/app_text_styles.dart';
+import 'package:doctors_app/core/widgets/app_text_button.dart';
+import 'package:doctors_app/core/widgets/app_vertical_spacing.dart';
 
+import '../logic/cubit/login_cubit.dart';
 import 'widgets/dont_have_account_text.dart';
 import 'widgets/email_and_password.dart';
 import 'widgets/login_bloc_listener.dart';
@@ -41,16 +41,16 @@ class _LoginScreenState extends State<LoginScreen> {
                   'Welcome Back',
                   style: AppTextStyles.font24BlueBold,
                 ),
-                verticalSpace(8),
+                const VerticalSpacing(height: 8),
                 Text(
                   "We're excited to have you back, can't wait to see what you've been up to since you last logged in.",
                   style: AppTextStyles.font14GreyRegular,
                 ),
-                verticalSpace(36),
+                const VerticalSpacing(height: 36),
                 Column(
                   children: [
                     const EmailAndPassword(),
-                    verticalSpace(25),
+                    const VerticalSpacing(height: 25),
                     Align(
                       alignment: AlignmentDirectional.topEnd,
                       child: Text(
@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         style: AppTextStyles.font13BlueRegular,
                       ),
                     ),
-                    verticalSpace(40),
+                    const VerticalSpacing(height: 40),
                     AppTextButton(
                       onPressed: () {
                         validateThenDoLogin(context);
@@ -66,9 +66,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       buttonText: 'Login',
                       textStyle: AppTextStyles.font16WhiteSemiBold,
                     ),
-                    verticalSpace(20),
+                    const VerticalSpacing(height: 20),
                     const TermsAndConditionsText(),
-                    verticalSpace(40),
+                    const VerticalSpacing(height: 40),
                     const DontHaveAccountText(),
                     const LoginBlocListener(),
                   ],

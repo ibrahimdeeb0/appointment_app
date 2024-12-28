@@ -1,8 +1,9 @@
-import 'package:doctors_app/core/helpers/spacing.dart';
-import 'package:doctors_app/core/theming/app_colors.dart';
-import 'package:doctors_app/core/theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'package:doctors_app/core/theme/app_colors.dart';
+import 'package:doctors_app/core/theme/app_text_styles.dart';
+import 'package:doctors_app/core/widgets/app_vertical_spacing.dart';
 
 import '../../../data/models/specializations_response_model.dart';
 
@@ -52,7 +53,7 @@ class SpecialtyListViewItem extends StatelessWidget {
                     width: 30.w,
                   ),
                 ),
-          verticalSpace(8),
+          const VerticalSpacing(height: 8),
           Text(
             specializationsData?.name ?? 'Specialization',
             style: itemIndex == selectedIndex

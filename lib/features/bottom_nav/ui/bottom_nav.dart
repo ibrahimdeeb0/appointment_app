@@ -1,4 +1,4 @@
-import 'package:doctors_app/core/theming/app_colors.dart';
+import 'package:doctors_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 
