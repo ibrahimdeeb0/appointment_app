@@ -11,14 +11,14 @@ class DoctorsRecommendSeeAll extends StatelessWidget {
       children: [
         Text(
           'Recommendation Doctor',
-          style: AppTextStyles.font18DarkBlueSemiBold,
+          style: AppTextStyles.body18DarkBlueSemiBold,
         ),
         const Spacer(),
         TextButton(
           onPressed: () {},
           child: Text(
             'See All',
-            style: AppTextStyles.font12BlueRegular,
+            style: AppTextStyles.caption12BlueRegular,
           ),
         ),
       ],

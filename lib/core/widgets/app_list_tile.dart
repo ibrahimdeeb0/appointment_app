@@ -48,7 +48,7 @@ class AppListTile extends StatelessWidget {
           ),
           title: Text(
             title,
-            style: titleStyle ?? AppTextStyles.font14DarkBlueRegular,
+            style: titleStyle ?? AppTextStyles.body14DarkBlueRegular,
           ),
           shape: const Border(
             bottom: BorderSide(

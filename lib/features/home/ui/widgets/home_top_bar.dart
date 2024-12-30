@@ -17,11 +17,11 @@ class HomeTopBar extends StatelessWidget {
           children: [
             Text(
               'Hi, Ibrahim!',
-              style: AppTextStyles.font18DarkBlueBold,
+              style: AppTextStyles.body18DarkBlueBold,
             ),
             Text(
               'How Are you Today?',
-              style: AppTextStyles.font12GrayRegular,
+              style: AppTextStyles.caption13GrayRegular,
             ),
           ],
         ),

@@ -57,18 +57,18 @@ class DoctorsListViewItem extends StatelessWidget {
               children: [
                 Text(
                   doctorModel?.name ?? 'Name',
-                  style: AppTextStyles.font18DarkBlueBold,
+                  style: AppTextStyles.body18DarkBlueBold,
                   overflow: TextOverflow.ellipsis,
                 ),
                 const VerticalSpacing(height: 5),
                 Text(
                   '${doctorModel?.degree} | ${doctorModel?.phone}',
-                  style: AppTextStyles.font12GrayMedium,
+                  style: AppTextStyles.caption12GrayMedium,
                 ),
                 const VerticalSpacing(height: 5),
                 Text(
                   doctorModel?.email ?? 'Email',
-                  style: AppTextStyles.font12GrayMedium,
+                  style: AppTextStyles.caption12GrayMedium,
                 ),
               ],
             ),

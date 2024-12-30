@@ -57,8 +57,8 @@ class SpecialtyListViewItem extends StatelessWidget {
           Text(
             specializationsData?.name ?? 'Specialization',
             style: itemIndex == selectedIndex
-                ? AppTextStyles.font14DarkBlueBold
-                : AppTextStyles.font12DarkBlueRegular,
+                ? AppTextStyles.body14DarkBlueBold
+                : AppTextStyles.caption12DarkBlueRegular,
           ),
         ],
       ),
