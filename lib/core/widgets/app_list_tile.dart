@@ -52,7 +52,7 @@ class AppListTile extends StatelessWidget {
           ),
           shape: const Border(
             bottom: BorderSide(
-              color: AppColors.lighterGray,
+              color: AppColors.borderGray,
               width: 2.0,
             ),
           ),

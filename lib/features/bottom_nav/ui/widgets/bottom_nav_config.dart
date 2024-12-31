@@ -22,7 +22,7 @@ class BottomNavConfig {
   static final List<Map<String, String>> _bottomNavItems = [
     {'icon': 'assets/svgs/bottom_nav_home.svg', 'title': 'Home'},
     {'icon': 'assets/svgs/bottom_nav_inbox.svg', 'title': 'Inbox'},
-    {'icon': 'assets/svgs/bottom_nav_appointments.svg', 'title': 'Appointments'},
+    {'icon': 'assets/svgs/bottom_nav_appointments.svg', 'title': 'Appointment'},
     {'icon': 'assets/svgs/bottom_nav_profile.svg', 'title': 'Profile'},
   ];
 

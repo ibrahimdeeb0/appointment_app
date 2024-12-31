@@ -4,7 +4,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:doctors_app/core/theme/app_colors.dart';
 import 'package:doctors_app/core/helpers/font_weight_helper.dart';
 
+/// A utility class for app test styles. Should not be instantiated.
 class AppTextStyles {
+  AppTextStyles._();
+
   //? Base Style
   static final TextStyle _baseStyle = TextStyle(
     fontSize: 14.sp,

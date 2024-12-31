@@ -29,7 +29,8 @@ class HomeTopBar extends StatelessWidget {
         IconButton(
           onPressed: () {},
           style: const ButtonStyle(
-            backgroundColor: WidgetStatePropertyAll(AppColors.lighterGray),
+            backgroundColor:
+                WidgetStatePropertyAll<Color>(AppColors.backgroundPrimary),
           ),
           icon: SvgPicture.asset(
             'assets/svgs/notifications.svg',
