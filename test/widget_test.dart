@@ -5,7 +5,7 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:doctors_app/core/constants/constants.dart';
+import 'package:doctors_app/core/constants/shared_pref_keys.dart';
 import 'package:doctors_app/core/helpers/extensions.dart';
 import 'package:doctors_app/core/helpers/shared_pref_helper.dart';
 import 'package:doctors_app/core/routing/app_router.dart';

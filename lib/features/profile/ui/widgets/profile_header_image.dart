@@ -37,7 +37,7 @@ class ProfileHeaderImage extends StatelessWidget {
                   onPressed: onEdit,
                   style: const ButtonStyle(
                     backgroundColor: WidgetStatePropertyAll<Color>(
-                      AppColors.lighterGray,
+                      AppColors.backgroundSecondary,
                     ),
                   ),
                   icon: SvgPicture.asset(

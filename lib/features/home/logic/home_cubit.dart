@@ -1,4 +1,4 @@
-import 'package:doctors_app/core/constants/icons_path_constant.dart';
+import 'package:doctors_app/core/constants/specialty_icons_paths.dart';
 import 'package:doctors_app/core/helpers/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

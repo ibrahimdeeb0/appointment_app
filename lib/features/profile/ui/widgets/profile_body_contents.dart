@@ -29,12 +29,12 @@ class ProfileBodyContents extends StatelessWidget {
           SizedBox(height: 98.h),
           Text(
             'Ibrahim Salem',
-            style: AppTextStyles.font20LightBlackSemiBold,
+            style: AppTextStyles.profileTitle,
           ),
           const VerticalSpacing(height: 8),
           Text(
             'ibrahim.deep.dev@gmail.com',
-            style: AppTextStyles.font14GrayRegular,
+            style: AppTextStyles.body14GrayRegular,
           ),
           //
           const VerticalSpacing(height: 16),

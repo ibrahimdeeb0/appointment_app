@@ -18,7 +18,7 @@ class ProfileScreen extends StatelessWidget implements BottomNavScreen {
     return AppBar(
       title: Text(
         'Profile',
-        style: AppTextStyles.font18WhiteSemiBold,
+        style: AppTextStyles.body18WhiteSemiBold,
       ),
       backgroundColor: AppColors.mainBlue,
       actions: [

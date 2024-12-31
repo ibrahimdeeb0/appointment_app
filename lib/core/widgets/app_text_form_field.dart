@@ -50,7 +50,7 @@ class AppTextFormField extends StatelessWidget {
         enabledBorder: enabledBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                color: AppColors.lighterGray,
+                color: AppColors.borderGray,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(16.0),
@@ -69,14 +69,20 @@ class AppTextFormField extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(16.0),
         ),
-        hintStyle: hintStyle ?? AppTextStyles.font14LightGrayRegular,
+        hintStyle: hintStyle ??
+            AppTextStyles.body14GrayRegular.copyWith(
+              color: AppColors.lightGray,
+            ),
         hintText: hintText,
         suffixIcon: suffixIcon,
-        fillColor: backgroundColor ?? AppColors.moreLighterGray,
+        fillColor: backgroundColor ?? AppColors.backgroundPrimary,
         filled: true,
       ),
       obscureText: isObscureText ?? false,
-      style: inputTextStyle ?? AppTextStyles.font14DarkBlueMedium,
+      style: inputTextStyle ??
+          AppTextStyles.body14DarkBlueBold.copyWith(
+            fontWeight: FontWeight.w500,
+          ),
       validator: (value) => validator(value),
     );
   }

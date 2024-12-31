@@ -39,12 +39,12 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 Text(
                   'Welcome Back',
-                  style: AppTextStyles.font24BlueBold,
+                  style: AppTextStyles.heading24BlueBold,
                 ),
                 const VerticalSpacing(height: 8),
                 Text(
                   "We're excited to have you back, can't wait to see what you've been up to since you last logged in.",
-                  style: AppTextStyles.font14GreyRegular,
+                  style: AppTextStyles.body14GrayRegular,
                 ),
                 const VerticalSpacing(height: 36),
                 Column(
@@ -55,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       alignment: AlignmentDirectional.topEnd,
                       child: Text(
                         'Forgot Password?',
-                        style: AppTextStyles.font13BlueRegular,
+                        style: AppTextStyles.body14BlueRegular,
                       ),
                     ),
                     const VerticalSpacing(height: 40),
@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         validateThenDoLogin(context);
                       },
                       buttonText: 'Login',
-                      textStyle: AppTextStyles.font16WhiteSemiBold,
+                      textStyle: AppTextStyles.button16WhiteSemiBold,
                     ),
                     const VerticalSpacing(height: 20),
                     const TermsAndConditionsText(),

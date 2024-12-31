@@ -5,7 +5,7 @@ import 'package:doctors_app/features/login/ui/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'core/constants/constants.dart';
+import 'core/constants/shared_pref_keys.dart';
 import 'core/helpers/shared_pref_helper.dart';
 import 'core/routing/app_router.dart';
 import 'core/helpers/extensions.dart';
