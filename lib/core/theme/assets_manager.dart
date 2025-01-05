@@ -54,4 +54,7 @@ class AssetsManager {
       'assets/svgs/profile_personal_info.svg';
   static const String profileSettingsIcon =
       'assets/svgs/profile_settings_icon.svg';
+  static const String settingFQA = 'assets/svgs/setting_fqa_icon.svg';
+  static const String settingLanguage = 'assets/svgs/setting_language_icon.svg';
+  static const String settingLogout = 'assets/svgs/setting_logout_icon.svg';
 }

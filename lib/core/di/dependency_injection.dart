@@ -13,10 +13,15 @@ import 'package:get_it/get_it.dart';
 
 import '../../features/login/data/repo/login_repo.dart';
 import '../../features/login/logic/cubit/login_cubit.dart';
+import '../navigation/app_navigator_observer.dart';
+import '../navigation/app_router.dart';
 
 final getIt = GetIt.instance;
 
 Future<void> setupGetIt() async {
+  getIt.registerSingleton<AppRouter>(AppRouter());
+  getIt.registerSingleton<AppNavigatorObserver>(AppNavigatorObserver());
+
   // Dio & ApiService
   Dio dio = DioFactory.getDio();
   getIt.registerLazySingleton<ApiService>(() => ApiService(dio));

@@ -6,7 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../appointments/ui/appointments_screen.dart';
 import '../../../home/ui/home_screen.dart';
 import '../../../inbox/ui/inbox_screen.dart';
-import '../../../profile/ui/profile_screen.dart';
+import '../../../profile/ui/screens/profile_screen.dart';
 import 'bottom_nav_screen.dart';
 
 class BottomNavConfig {

@@ -5,11 +5,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:doctors_app/core/theme/app_colors.dart';
 import 'package:doctors_app/core/theme/assets_manager.dart';
 
-class ProfileHeaderImage extends StatelessWidget {
+class ProfileHeaderImageWidget extends StatelessWidget {
   final String imagePath;
   final VoidCallback? onEdit;
 
-  const ProfileHeaderImage({
+  const ProfileHeaderImageWidget({
     super.key,
     required this.imagePath,
     this.onEdit,

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../theme/app_colors.dart';
 import '../theme/app_text_styles.dart';
+import 'bottom_border.dart';
 
 class AppListTile extends StatelessWidget {
   final String leadingIconPath;
@@ -14,8 +14,10 @@ class AppListTile extends StatelessWidget {
   final Widget? trailing;
   final Color? backgroundColor;
   final TextStyle? titleStyle;
-  final EdgeInsetsGeometry? contentPadding;
   final EdgeInsetsGeometry? tilePadding;
+  final double horizontalContentPadding;
+  final double verticalContentPadding;
+  final bool showBottomBorder;
 
   const AppListTile({
     super.key,
@@ -24,41 +26,47 @@ class AppListTile extends StatelessWidget {
     this.onTap,
     this.iconWidth = 40.0,
     this.iconHeight = 40.0,
-    this.contentPadding,
+    this.horizontalContentPadding = 24,
+    this.verticalContentPadding = 12,
     this.tilePadding,
     this.trailing,
     this.backgroundColor,
     this.titleStyle,
+    this.showBottomBorder = true,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: tilePadding ?? EdgeInsets.zero,
-      child: Material(
-        color: backgroundColor ?? Colors.white,
-        child: ListTile(
-          onTap: onTap,
-          contentPadding: contentPadding ??
-              EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
-          leading: SvgPicture.asset(
-            leadingIconPath,
-            width: iconWidth.w,
-            height: iconHeight.h,
-          ),
-          title: Text(
-            title,
-            style: titleStyle ?? AppTextStyles.body14DarkBlueRegular,
-          ),
-          shape: const Border(
-            bottom: BorderSide(
-              color: AppColors.borderGray,
-              width: 2.0,
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Padding(
+          padding: tilePadding ?? EdgeInsets.zero,
+          child: Material(
+            child: ListTile(
+              onTap: onTap,
+              contentPadding: EdgeInsets.symmetric(
+                horizontal: horizontalContentPadding.w,
+                vertical: verticalContentPadding.h,
+              ),
+              tileColor:
+                  backgroundColor ?? Theme.of(context).scaffoldBackgroundColor,
+              leading: SvgPicture.asset(
+                leadingIconPath,
+                width: iconWidth.w,
+                height: iconHeight.h,
+              ),
+              title: Text(
+                title,
+                style: titleStyle ?? AppTextStyles.body14DarkBlueRegular,
+              ),
+              trailing: trailing,
             ),
           ),
-          trailing: trailing,
         ),
-      ),
+        if (showBottomBorder)
+          BottomBorder(horizontalSpacing: horizontalContentPadding.w),
+      ],
     );
   }
 }

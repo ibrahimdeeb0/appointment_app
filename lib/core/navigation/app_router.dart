@@ -4,7 +4,7 @@ import 'package:doctors_app/features/home/ui/routes.dart';
 import 'package:doctors_app/features/inbox/ui/routes.dart';
 import 'package:doctors_app/features/login/ui/routes.dart';
 import 'package:doctors_app/features/on_boarding/routes.dart';
-import 'package:doctors_app/features/profile/ui/routes.dart';
+import 'package:doctors_app/features/profile/routes/profile_routes.dart';
 import 'package:doctors_app/features/sign_up/ui/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -40,8 +40,8 @@ class AppRouter {
       return AppointmentRoutes.generateRoute(settings);
     }
 
-    // Profile Routes
-    if (settings.name == ProfileRoutes.profileScreen) {
+    // Profile Routes (Including Sub-Routes)
+    if (settings.name!.startsWith(ProfileRoutes.profileScreen)) {
       return ProfileRoutes.generateRoute(settings);
     }
 

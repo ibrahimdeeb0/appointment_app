@@ -8,7 +8,6 @@
 import 'package:doctors_app/core/constants/shared_pref_keys.dart';
 import 'package:doctors_app/core/helpers/extensions.dart';
 import 'package:doctors_app/core/helpers/shared_pref_helper.dart';
-import 'package:doctors_app/core/routing/app_router.dart';
 import 'package:doctors_app/doc_app.dart';
 import 'package:doctors_app/features/home/ui/routes.dart';
 import 'package:doctors_app/features/login/ui/routes.dart';
@@ -21,7 +20,6 @@ void main() {
 
     // Build our app and trigger a frame.
     await tester.pumpWidget(DocApp(
-      appRouter: AppRouter(),
       initialRoute: initialRoute,
     ));
 

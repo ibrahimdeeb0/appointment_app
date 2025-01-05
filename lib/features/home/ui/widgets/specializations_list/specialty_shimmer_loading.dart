@@ -3,7 +3,7 @@ import 'package:shimmer/shimmer.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:doctors_app/core/theme/app_colors.dart';
-import 'package:doctors_app/core/widgets/app_vertical_spacing.dart';
+import 'package:doctors_app/core/helpers/app_vertical_spacing.dart';
 
 class SpecialtyShimmerLoading extends StatelessWidget {
   const SpecialtyShimmerLoading({super.key});
@@ -28,7 +28,7 @@ class SpecialtyShimmerLoading extends StatelessWidget {
                     backgroundColor: Colors.white,
                   ),
                 ),
-                const VerticalSpacing(height: 14),
+                const AppVerticalSpacing(height: 14),
                 Shimmer.fromColors(
                   baseColor: AppColors.lightGray,
                   highlightColor: Colors.white,

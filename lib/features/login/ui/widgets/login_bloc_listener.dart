@@ -1,4 +1,5 @@
 import 'package:doctors_app/core/networking/api_error_model.dart';
+import 'package:doctors_app/features/bottom_nav/ui/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:doctors_app/core/helpers/extensions.dart';
@@ -7,7 +8,6 @@ import 'package:doctors_app/features/login/logic/cubit/login_state.dart';
 
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_text_styles.dart';
-import '../../../home/ui/routes.dart';
 
 class LoginBlocListener extends StatelessWidget {
   const LoginBlocListener({super.key});
@@ -33,7 +33,7 @@ class LoginBlocListener extends StatelessWidget {
           },
           loginSuccess: (loginResponse) {
             context.pop();
-            context.pushReplacementNamed(HomeRoutes.home);
+            context.pushReplacementNamed(BottomNavRoutes.bottomNav);
           },
           loginError: (apiErrorModel) {
             setupErrorState(context, apiErrorModel);
