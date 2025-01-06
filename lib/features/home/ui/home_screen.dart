@@ -21,16 +21,12 @@ class HomeScreen extends StatelessWidget implements BottomNavScreen {
   @override
   PreferredSizeWidget? buildAppBar(BuildContext context) {
     return null;
-    // AppBar(
-    //   title: const Text('Home'),
-    //   backgroundColor: Colors.blue,
-    // );
   }
 
   @override
   Widget buildBody(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<HomeCubit>(),
+      create: (context) => getIt<HomeCubit>()..getSpecializations(),
       child: SafeArea(
         child: Container(
           width: double.infinity,

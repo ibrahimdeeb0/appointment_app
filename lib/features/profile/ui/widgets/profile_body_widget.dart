@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:doctors_app/core/helpers/extensions.dart';
-import 'package:doctors_app/core/theme/app_text_styles.dart';
 import 'package:doctors_app/core/widgets/app_list_tile.dart';
 import 'package:doctors_app/core/helpers/app_vertical_spacing.dart';
 
 import '../../config/profile_tile_options.dart';
+import 'view_profile_data_builder.dart';
 
 class ProfileBodyWidget extends StatelessWidget {
   const ProfileBodyWidget({super.key});
@@ -27,15 +27,7 @@ class ProfileBodyWidget extends StatelessWidget {
       child: Column(
         children: [
           const AppVerticalSpacing(height: 80),
-          Text(
-            'Ibrahim Salem',
-            style: AppTextStyles.profileTitle,
-          ),
-          const AppVerticalSpacing(height: 8),
-          Text(
-            'ibrahim.deep.dev@gmail.com',
-            style: AppTextStyles.body14GrayRegular,
-          ),
+          const ViewProfileDataBuilder(),
           //
           const AppVerticalSpacing(height: 16),
           ...ProfileOptionsConfig.profileOptions.map(

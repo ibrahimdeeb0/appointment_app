@@ -1,5 +1,6 @@
 import 'package:doctors_app/core/helpers/extensions.dart';
 import 'package:doctors_app/core/helpers/shared_pref_helper.dart';
+import 'package:doctors_app/core/theme/app_colors.dart';
 import 'package:doctors_app/core/widgets/app_dialog.dart';
 import 'package:doctors_app/features/login/ui/routes.dart';
 import 'package:flutter/material.dart';
@@ -81,6 +82,10 @@ class LogoutHandler extends ProfileSettingHandler {
       title: 'Logout',
       message:
           'You’ll need to enter your username and password next time you want to login',
+      confirmText: 'Logout',
+      confirmColor: AppColors.red,
+      cancelText: 'Cancel',
+      cancelColor: AppColors.buttonPrimary,
     );
 
     if (isLogout) {

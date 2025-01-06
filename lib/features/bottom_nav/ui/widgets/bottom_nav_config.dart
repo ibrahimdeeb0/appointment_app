@@ -10,7 +10,7 @@ import '../../../profile/ui/screens/profile_screen.dart';
 import 'bottom_nav_screen.dart';
 
 class BottomNavConfig {
-  // List of BottomNavScreens
+  /// List of BottomNavScreens
   static final List<BottomNavScreen> screens = [
     const HomeScreen(),
     const InboxScreen(),
@@ -18,7 +18,7 @@ class BottomNavConfig {
     const ProfileScreen(),
   ];
 
-  // Bottom Navigation Items Configuration
+  /// Bottom Navigation Items Configuration
   static final List<Map<String, String>> _bottomNavItems = [
     {'icon': 'assets/svgs/bottom_nav_home.svg', 'title': 'Home'},
     {'icon': 'assets/svgs/bottom_nav_inbox.svg', 'title': 'Inbox'},
@@ -26,7 +26,7 @@ class BottomNavConfig {
     {'icon': 'assets/svgs/bottom_nav_profile.svg', 'title': 'Profile'},
   ];
 
-  // Get TabItems for BottomNavigationBar
+  /// Get TabItems for BottomNavigationBar
   static List<TabItem<SvgPicture>> get tabItems => _bottomNavItems.map((item) {
         return TabItem<SvgPicture>(
           icon: SvgPicture.asset(

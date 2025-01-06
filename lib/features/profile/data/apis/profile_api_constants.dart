@@ -1,1 +1,3 @@
-class ProfileApiConstants {}
+class ProfileApiConstants {
+  static const String profileEP = '/user/profile';
+}
