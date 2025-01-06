@@ -1,3 +1,4 @@
+import 'package:doctors_app/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -22,12 +23,12 @@ class AppDialog {
             style: const TextStyle(fontWeight: FontWeight.bold),
           ),
           content: Padding(
-            padding: contentPadding ??   EdgeInsets.all(16.0.r),
+            padding: contentPadding ?? EdgeInsets.all(16.0.r),
             child: content,
           ),
           backgroundColor: backgroundColor ?? Colors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16.0),
+            borderRadius: BorderRadius.circular(16.0.r),
           ),
           actions: actions,
         );
@@ -42,7 +43,7 @@ class AppDialog {
     required String message,
     String confirmText = 'Yes',
     String cancelText = 'No',
-    Color confirmColor = Colors.green,
+    Color? confirmColor,
     Color cancelColor = Colors.red,
   }) async {
     final result = await show<bool>(
@@ -58,7 +59,10 @@ class AppDialog {
         ElevatedButton(
           onPressed: () => Navigator.of(context).pop(true),
           style: ElevatedButton.styleFrom(backgroundColor: confirmColor),
-          child: Text(confirmText),
+          child: Text(
+            confirmText,
+            style: AppTextStyles.button16WhiteMedium,
+          ),
         ),
       ],
     );

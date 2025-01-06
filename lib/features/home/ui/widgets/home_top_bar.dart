@@ -1,3 +1,4 @@
+import 'package:doctors_app/core/theme/assets_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -30,10 +31,10 @@ class HomeTopBar extends StatelessWidget {
           onPressed: () {},
           style: const ButtonStyle(
             backgroundColor:
-                WidgetStatePropertyAll<Color>(AppColors.backgroundPrimary),
+                WidgetStatePropertyAll<Color>(AppColors.borderGray),
           ),
           icon: SvgPicture.asset(
-            'assets/svgs/notifications.svg',
+            AssetsManager.notifications,
             width: 32.w,
           ),
         ),

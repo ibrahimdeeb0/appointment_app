@@ -9,6 +9,7 @@ import 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   final HomeRepo _homeRepo;
+
   HomeCubit(this._homeRepo) : super(const HomeState.initial());
 
   List<SpecializationsData?>? specializationsList = [];
@@ -16,6 +17,7 @@ class HomeCubit extends Cubit<HomeState> {
   void getSpecializations() async {
     emit(const HomeState.specializationsLoading());
     final response = await _homeRepo.getSpecialization();
+
     response.when(
       success: (specializationsResponseModel) {
         specializationsList =

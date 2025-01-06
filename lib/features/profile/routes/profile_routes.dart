@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'profile_screen.dart';
+import '../ui/screens/profile_screen.dart';
+import '../ui/screens/profile_setting_screen.dart';
 
 class ProfileRoutes {
   static const String profileScreen = '/profileScreen';
+  static const String profileSettingsScreen = '/profileScreen/settings/';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -10,6 +12,12 @@ class ProfileRoutes {
         return MaterialPageRoute(
           builder: (_) => const ProfileScreen(),
         );
+
+      case profileSettingsScreen:
+        return MaterialPageRoute(
+          builder: (_) => const ProfileSettingScreen(),
+        );
+
       default:
         return _undefinedRoute(settings.name);
     }

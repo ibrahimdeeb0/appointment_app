@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:doctors_app/core/widgets/app_text_form_field.dart';
 import 'package:doctors_app/core/helpers/app_regex.dart';
 import 'package:doctors_app/features/sign_up/logic/sign_up_cubit.dart';
-import 'package:doctors_app/core/widgets/app_vertical_spacing.dart';
+import 'package:doctors_app/core/helpers/app_vertical_spacing.dart';
 
 import '../../../login/ui/widgets/password_validations.dart';
 
@@ -62,7 +62,7 @@ class _SignupFormState extends State<SignupForm> {
             },
             controller: context.read<SignupCubit>().nameController,
           ),
-          const VerticalSpacing(height: 18),
+          const AppVerticalSpacing(height: 18),
           AppTextFormField(
             hintText: 'Phone number',
             validator: (value) {
@@ -74,7 +74,7 @@ class _SignupFormState extends State<SignupForm> {
             },
             controller: context.read<SignupCubit>().phoneController,
           ),
-          const VerticalSpacing(height: 18),
+          const AppVerticalSpacing(height: 18),
           AppTextFormField(
             hintText: 'Email',
             validator: (value) {
@@ -86,7 +86,7 @@ class _SignupFormState extends State<SignupForm> {
             },
             controller: context.read<SignupCubit>().emailController,
           ),
-          const VerticalSpacing(height: 18),
+          const AppVerticalSpacing(height: 18),
           AppTextFormField(
             controller: context.read<SignupCubit>().passwordController,
             hintText: 'Password',
@@ -107,7 +107,7 @@ class _SignupFormState extends State<SignupForm> {
               }
             },
           ),
-          const VerticalSpacing(height: 18),
+          const AppVerticalSpacing(height: 18),
           AppTextFormField(
             controller:
                 context.read<SignupCubit>().passwordConfirmationController,
@@ -132,7 +132,7 @@ class _SignupFormState extends State<SignupForm> {
               }
             },
           ),
-          const VerticalSpacing(height: 24),
+          const AppVerticalSpacing(height: 24),
           PasswordValidations(
             hasLowerCase: hasLowercase,
             hasUpperCase: hasUppercase,

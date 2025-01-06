@@ -6,7 +6,7 @@ import 'package:doctors_app/core/widgets/app_text_button.dart';
 import 'package:doctors_app/core/theme/app_text_styles.dart';
 import 'package:doctors_app/features/sign_up/ui/widgets/sign_up_bloc_listener.dart';
 import 'package:doctors_app/features/sign_up/ui/widgets/sign_up_form.dart';
-import 'package:doctors_app/core/widgets/app_vertical_spacing.dart';
+import 'package:doctors_app/core/helpers/app_vertical_spacing.dart';
 
 import '../logic/sign_up_cubit.dart';
 import 'widgets/already_have_account_text.dart';
@@ -29,16 +29,16 @@ class SignupScreen extends StatelessWidget {
                   'Create Account',
                   style: AppTextStyles.heading24BlueBold,
                 ),
-                const VerticalSpacing(height: 8),
+                const AppVerticalSpacing(height: 8),
                 Text(
                   'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
                   style: AppTextStyles.body14GrayRegular,
                 ),
-                const VerticalSpacing(height: 36),
+                const AppVerticalSpacing(height: 36),
                 Column(
                   children: [
                     const SignupForm(),
-                    const VerticalSpacing(height: 40),
+                    const AppVerticalSpacing(height: 40),
                     AppTextButton(
                       buttonText: "Create Account",
                       textStyle: AppTextStyles.button16WhiteSemiBold,
@@ -46,9 +46,9 @@ class SignupScreen extends StatelessWidget {
                         validateThenDoSignup(context);
                       },
                     ),
-                    const VerticalSpacing(height: 16),
+                    const AppVerticalSpacing(height: 16),
                     const TermsAndConditionsText(),
-                    const VerticalSpacing(height: 30),
+                    const AppVerticalSpacing(height: 30),
                     const AlreadyHaveAccountText(),
                     const SignupBlocListener(),
                   ],

@@ -20,6 +20,8 @@ class AppColors {
   static const Color lighterBlack =
       Color(0xFF121212); // For dark mode backgrounds
 
+  static const Color red = Color(0xFFFF4C5E);
+
   //? Text Colors
   static const Color textPrimary = darkBlue; // Primary text color
   static const Color textSecondary = gray; // Secondary text color

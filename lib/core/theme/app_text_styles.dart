@@ -34,6 +34,12 @@ class AppTextStyles {
     fontWeight: FontWeightHelper.bold,
   );
 
+  static TextStyle heading20BlackBold = _baseStyle.copyWith(
+    fontSize: 20.sp,
+    color: Colors.black,
+    fontWeight: FontWeightHelper.bold,
+  );
+
   //? Body Text
   static TextStyle body18DarkBlueBold = _baseStyle.copyWith(
     fontSize: 18.sp,
