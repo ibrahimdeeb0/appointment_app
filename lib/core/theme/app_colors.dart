@@ -11,6 +11,7 @@ class AppColors {
 
   //? Gray Scale
   static const Color gray = Color(0xFF757575); // Neutral gray for text
+  static const Color gray2 = Color(0xFF616161); // Neutral gray darkens for text
   static const Color lightGray =
       Color(0xFFEDEDED); // Light gray for borders/backgrounds
   static const Color extraLightGray =
@@ -31,7 +32,7 @@ class AppColors {
   static const Color backgroundPrimary =
       extraLightGray; // Primary light background
   static const Color backgroundSecondary = lightBlue; // Secondary background
-
+  static const Color fillColor = Color(0xFFF2F4F7);
   //? Border Colors
   static const Color borderGray = lightGray; // Light gray for borders
 

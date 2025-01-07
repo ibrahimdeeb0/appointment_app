@@ -12,6 +12,7 @@ class AppTextFormField extends StatelessWidget {
   final String hintText;
   final bool? isObscureText;
   final Widget? suffixIcon;
+  final Widget? prefixIcon;
   final Color? backgroundColor;
   final TextEditingController? controller;
   final Function(String?) validator;
@@ -28,6 +29,7 @@ class AppTextFormField extends StatelessWidget {
     this.hintStyle,
     this.isObscureText,
     this.suffixIcon,
+    this.prefixIcon,
     this.backgroundColor,
   });
 
@@ -39,22 +41,8 @@ class AppTextFormField extends StatelessWidget {
         isDense: true,
         contentPadding: contentPadding ??
             EdgeInsets.symmetric(horizontal: 20.w, vertical: 18.h),
-        focusedBorder: focusedBorder ??
-            OutlineInputBorder(
-              borderSide: const BorderSide(
-                color: AppColors.mainBlue,
-                width: 1.3,
-              ),
-              borderRadius: BorderRadius.circular(16.0),
-            ),
-        enabledBorder: enabledBorder ??
-            OutlineInputBorder(
-              borderSide: const BorderSide(
-                color: AppColors.borderGray,
-                width: 1.3,
-              ),
-              borderRadius: BorderRadius.circular(16.0),
-            ),
+        focusedBorder: focusedBorder,
+        enabledBorder: enabledBorder,
         errorBorder: OutlineInputBorder(
           borderSide: const BorderSide(
             color: Colors.red,
@@ -69,12 +57,10 @@ class AppTextFormField extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(16.0),
         ),
-        hintStyle: hintStyle ??
-            AppTextStyles.body14GrayRegular.copyWith(
-              color: AppColors.lightGray,
-            ),
+        hintStyle: hintStyle,
         hintText: hintText,
         suffixIcon: suffixIcon,
+        prefixIcon: prefixIcon,
         fillColor: backgroundColor ?? AppColors.backgroundPrimary,
         filled: true,
       ),

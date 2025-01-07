@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:doctors_app/core/helpers/extensions.dart';
+import 'package:doctors_app/core/helpers/spacing_extension.dart';
 import 'package:doctors_app/core/widgets/app_list_tile.dart';
-import 'package:doctors_app/core/helpers/app_vertical_spacing.dart';
 
 import '../../config/profile_tile_options.dart';
 import 'view_profile_data_builder.dart';
@@ -15,7 +14,7 @@ class ProfileBodyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 90.h),
-      width: context.flexWidth(),
+      width: context.screenFlexWidth(),
       decoration: ShapeDecoration(
         color: Theme.of(context).cardColor,
         shape: RoundedRectangleBorder(
@@ -26,10 +25,10 @@ class ProfileBodyWidget extends StatelessWidget {
       ),
       child: Column(
         children: [
-          const AppVerticalSpacing(height: 80),
+          80.spacingVertical,
           const ViewProfileDataBuilder(),
           //
-          const AppVerticalSpacing(height: 16),
+          16.spacingVertical,
           ...ProfileOptionsConfig.profileOptions.map(
             (option) => AppListTile(
               onTap: ProfileOptionsConfig.handleOptionPress[option.type] != null

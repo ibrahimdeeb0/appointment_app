@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:doctors_app/core/helpers/app_regex.dart';
-import 'package:doctors_app/core/theme/app_colors.dart';
-import 'package:doctors_app/core/helpers/app_vertical_spacing.dart';
 import 'package:doctors_app/core/widgets/app_text_form_field.dart';
+import 'package:doctors_app/core/helpers/spacing_extension.dart';
+import 'package:doctors_app/core/theme/app_colors.dart';
 
 import '../../logic/cubit/login_cubit.dart';
 import 'password_validations.dart';
@@ -64,7 +64,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
               }
             },
           ),
-          const AppVerticalSpacing(height: 18),
+          18.spacingVertical,
           AppTextFormField(
             hintText: 'Password',
             controller: context.read<LoginCubit>().passwordController,
@@ -84,7 +84,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
               }
             },
           ),
-          const AppVerticalSpacing(height: 24),
+          24.spacingVertical,
           PasswordValidations(
             hasLowerCase: hasLowercase,
             hasUpperCase: hasUppercase,

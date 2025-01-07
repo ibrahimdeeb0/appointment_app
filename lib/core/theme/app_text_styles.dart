@@ -76,6 +76,12 @@ class AppTextStyles {
     fontWeight: FontWeightHelper.bold,
   );
 
+  static TextStyle body14DarkBlueSemiBold = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.darkBlue,
+    fontWeight: FontWeightHelper.semiBold,
+  );
+
   static final TextStyle body14DarkBlueRegular = _baseStyle.copyWith(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,

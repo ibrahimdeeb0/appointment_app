@@ -1,5 +1,5 @@
 import 'package:doctors_app/core/di/dependency_injection.dart';
-import 'package:doctors_app/core/helpers/app_vertical_spacing.dart';
+import 'package:doctors_app/core/helpers/spacing_extension.dart';
 import 'package:doctors_app/features/bottom_nav/ui/widgets/bottom_nav_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -36,16 +36,16 @@ class HomeScreen extends StatelessWidget implements BottomNavScreen {
             20.0,
             0.0,
           ),
-          child: const Column(
+          child: Column(
             children: [
-              HomeTopBar(),
-              DoctorsBlueContainer(),
-              AppVerticalSpacing(height: 20),
-              DoctorsSpecialtySeeAll(),
-              AppVerticalSpacing(height: 18),
-              SpecializationsBlocBuilder(),
-              AppVerticalSpacing(height: 8),
-              DoctorsBlocBuilder(),
+              const HomeTopBar(),
+              const DoctorsBlueContainer(),
+              20.spacingVertical,
+              const DoctorsSpecialtySeeAll(),
+              18.spacingVertical,
+              const SpecializationsBlocBuilder(),
+              8.spacingVertical,
+              const DoctorsBlocBuilder(),
             ],
           ),
         ),

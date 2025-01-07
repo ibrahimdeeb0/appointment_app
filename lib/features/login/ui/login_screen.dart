@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:doctors_app/core/theme/app_text_styles.dart';
 import 'package:doctors_app/core/widgets/app_text_button.dart';
-import 'package:doctors_app/core/helpers/app_vertical_spacing.dart';
+import 'package:doctors_app/core/helpers/spacing_extension.dart';
 
 import '../logic/cubit/login_cubit.dart';
 import 'widgets/dont_have_account_text.dart';
@@ -41,16 +41,16 @@ class _LoginScreenState extends State<LoginScreen> {
                   'Welcome Back',
                   style: AppTextStyles.heading24BlueBold,
                 ),
-                const AppVerticalSpacing(height: 8),
+                8.spacingVertical,
                 Text(
                   "We're excited to have you back, can't wait to see what you've been up to since you last logged in.",
                   style: AppTextStyles.body14GrayRegular,
                 ),
-                const AppVerticalSpacing(height: 36),
+                36.spacingVertical,
                 Column(
                   children: [
                     const EmailAndPassword(),
-                    const AppVerticalSpacing(height: 25),
+                    25.spacingVertical,
                     Align(
                       alignment: AlignmentDirectional.topEnd,
                       child: Text(
@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         style: AppTextStyles.body14BlueRegular,
                       ),
                     ),
-                    const AppVerticalSpacing(height: 40),
+                    40.spacingVertical,
                     AppTextButton(
                       onPressed: () {
                         validateThenDoLogin(context);
@@ -66,9 +66,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       buttonText: 'Login',
                       textStyle: AppTextStyles.button16WhiteSemiBold,
                     ),
-                    const AppVerticalSpacing(height: 20),
+                    20.spacingVertical,
                     const TermsAndConditionsText(),
-                    const AppVerticalSpacing(height: 40),
+                    40.spacingVertical,
                     const DontHaveAccountText(),
                     const LoginBlocListener(),
                   ],
