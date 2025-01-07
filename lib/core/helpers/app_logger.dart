@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:logger/logger.dart';
 
 class AppLogger {
@@ -59,5 +61,19 @@ class AppLogger {
   void exception(dynamic exception, {StackTrace? stackTrace}) {
     _logger.e("Exception: $exception",
         error: exception, stackTrace: stackTrace);
+  }
+}
+
+/// A custom output for the logger that logs messages to the developer console.
+/// Add this output to the logger to display logs in the console.
+/// customOutput: MultiOutput([
+///        DeveloperConsoleOutput(),
+///      ]),
+class DeveloperConsoleOutput extends LogOutput {
+  @override
+  void output(OutputEvent event) {
+    final StringBuffer buffer = StringBuffer();
+    event.lines.forEach(buffer.writeln);
+    log(buffer.toString());
   }
 }

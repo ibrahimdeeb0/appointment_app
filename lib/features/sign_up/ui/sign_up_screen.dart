@@ -1,3 +1,4 @@
+import 'package:doctors_app/core/helpers/spacing_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,7 +7,6 @@ import 'package:doctors_app/core/widgets/app_text_button.dart';
 import 'package:doctors_app/core/theme/app_text_styles.dart';
 import 'package:doctors_app/features/sign_up/ui/widgets/sign_up_bloc_listener.dart';
 import 'package:doctors_app/features/sign_up/ui/widgets/sign_up_form.dart';
-import 'package:doctors_app/core/helpers/app_vertical_spacing.dart';
 
 import '../logic/sign_up_cubit.dart';
 import 'widgets/already_have_account_text.dart';
@@ -29,16 +29,16 @@ class SignupScreen extends StatelessWidget {
                   'Create Account',
                   style: AppTextStyles.heading24BlueBold,
                 ),
-                const AppVerticalSpacing(height: 8),
+                8.spacingVertical,
                 Text(
                   'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
                   style: AppTextStyles.body14GrayRegular,
                 ),
-                const AppVerticalSpacing(height: 36),
+                36.spacingVertical,
                 Column(
                   children: [
                     const SignupForm(),
-                    const AppVerticalSpacing(height: 40),
+                    40.spacingVertical,
                     AppTextButton(
                       buttonText: "Create Account",
                       textStyle: AppTextStyles.button16WhiteSemiBold,
@@ -46,9 +46,9 @@ class SignupScreen extends StatelessWidget {
                         validateThenDoSignup(context);
                       },
                     ),
-                    const AppVerticalSpacing(height: 16),
+                    16.spacingVertical,
                     const TermsAndConditionsText(),
-                    const AppVerticalSpacing(height: 30),
+                    30.spacingVertical,
                     const AlreadyHaveAccountText(),
                     const SignupBlocListener(),
                   ],

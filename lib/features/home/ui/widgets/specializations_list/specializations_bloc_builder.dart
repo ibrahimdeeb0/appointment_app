@@ -1,8 +1,8 @@
+import 'package:doctors_app/core/helpers/spacing_extension.dart';
 import 'package:doctors_app/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:doctors_app/core/helpers/app_vertical_spacing.dart';
 import 'package:doctors_app/core/networking/api_error_model.dart';
 import 'package:doctors_app/core/widgets/app_dialog.dart';
 
@@ -50,12 +50,12 @@ class SpecializationsBlocBuilder extends StatelessWidget {
 
   /// shimmer loading for specializations and doctors
   Widget setupLoading() {
-    return const Expanded(
+    return Expanded(
       child: Column(
         children: [
-          SpecialtyShimmerLoading(),
-          AppVerticalSpacing(height: 8),
-          DoctorsShimmerLoading(),
+          const SpecialtyShimmerLoading(),
+          8.spacingVertical,
+          const DoctorsShimmerLoading(),
         ],
       ),
     );
@@ -84,7 +84,10 @@ class SpecializationsBlocBuilder extends StatelessWidget {
       actions: [
         ElevatedButton(
           onPressed: () => Navigator.of(context).pop(),
-          child:   Text('OK', style: AppTextStyles.button16WhiteSemiBold,),
+          child: Text(
+            'OK',
+            style: AppTextStyles.button16WhiteSemiBold,
+          ),
         ),
       ],
     );

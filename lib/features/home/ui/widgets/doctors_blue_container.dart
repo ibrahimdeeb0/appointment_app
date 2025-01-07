@@ -1,8 +1,8 @@
+import 'package:doctors_app/core/helpers/spacing_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:doctors_app/core/theme/app_text_styles.dart';
-import 'package:doctors_app/core/helpers/app_vertical_spacing.dart';
 
 class DoctorsBlueContainer extends StatelessWidget {
   const DoctorsBlueContainer({super.key});
@@ -36,7 +36,7 @@ class DoctorsBlueContainer extends StatelessWidget {
                   style: AppTextStyles.body18WhiteMedium,
                   textAlign: TextAlign.start,
                 ),
-                const AppVerticalSpacing(height: 16),
+                16.spacingVertical,
                 Expanded(
                   child: ElevatedButton(
                     onPressed: () {},

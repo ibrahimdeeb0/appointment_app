@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'inbox_screen.dart';
+import 'screens/inbox_screen.dart';
 
 class InboxRoutes {
   static const String inboxScreen = '/inboxScreen';

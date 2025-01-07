@@ -119,12 +119,16 @@ class ThemeManager {
         filled: true,
         fillColor: fillColor,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(kDefaultBorderRadius),
-          borderSide: const BorderSide(color: AppColors.lightGray),
+          borderRadius: BorderRadius.circular(kDialogBorderRadius),
+          borderSide: const BorderSide(color: AppColors.lightGray, width: 1.3),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(kDialogBorderRadius),
+          borderSide: const BorderSide(color: AppColors.lightGray, width: 1.3),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(kDefaultBorderRadius),
-          borderSide: const BorderSide(color: AppColors.mainBlue),
+          borderRadius: BorderRadius.circular(kDialogBorderRadius),
+          borderSide: const BorderSide(color: AppColors.mainBlue, width: 1.3),
         ),
         hintStyle: AppTextStyles.body14GrayRegular,
       );

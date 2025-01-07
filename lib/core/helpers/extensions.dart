@@ -11,8 +11,7 @@ extension Navigation on BuildContext {
   }
 
   Future<dynamic> popAndPushNamed(String routeName, {Object? arguments}) {
-    return Navigator.of(this)
-        .popAndPushNamed(routeName, arguments: arguments);
+    return Navigator.of(this).popAndPushNamed(routeName, arguments: arguments);
   }
 
   Future<dynamic> name(String routeName,
@@ -38,11 +37,6 @@ extension ListExtension<T> on List<T>? {
 
 extension MapExtension<K, V> on Map<K, V>? {
   bool isNullOrEmpty() => this == null || this!.isEmpty;
-}
-
-extension Sizing on BuildContext {
-  double flexHeight() => MediaQuery.sizeOf(this).height;
-  double flexWidth() => MediaQuery.sizeOf(this).width;
 }
 
 extension ContextExt on BuildContext {

@@ -29,6 +29,9 @@ Future<void> setupGetIt() async {
     () => AppLogger(
       enableLogging: true,
       minimumLogLevel: Level.debug,
+      customOutput: MultiOutput([
+        DeveloperConsoleOutput(),
+      ]),
     ),
   );
 

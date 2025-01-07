@@ -57,4 +57,7 @@ class AssetsManager {
   static const String settingFQA = 'assets/svgs/setting_fqa_icon.svg';
   static const String settingLanguage = 'assets/svgs/setting_language_icon.svg';
   static const String settingLogout = 'assets/svgs/setting_logout_icon.svg';
+  static const String inboxAddMassage = 'assets/svgs/inbox_add_massage.svg';
+  static const String inboxSearchIcon = 'assets/svgs/inbox_search_icon.svg';
+  static const String inboxFilterIcon = 'assets/svgs/inbox_filter_icon.svg';
 }
