@@ -60,4 +60,5 @@ class AssetsManager {
   static const String inboxAddMassage = 'assets/svgs/inbox_add_massage.svg';
   static const String inboxSearchIcon = 'assets/svgs/inbox_search_icon.svg';
   static const String inboxFilterIcon = 'assets/svgs/inbox_filter_icon.svg';
+  static const String starRate = 'assets/svgs/star_rate.svg';
 }

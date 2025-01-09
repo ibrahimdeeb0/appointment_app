@@ -22,6 +22,7 @@ class ThemeManager {
         textTheme: _textTheme(AppColors.darkBlue),
         buttonTheme: _buttonTheme(),
         elevatedButtonTheme: _elevatedButtonTheme(),
+        outlinedButtonTheme: _outlinedButtonTheme(),
         inputDecorationTheme: _inputDecorationTheme(AppColors.lightGray),
         snackBarTheme: _snackBarTheme(AppColors.mainBlue),
         dialogTheme: _dialogTheme(AppColors.lightBlue),
@@ -109,6 +110,18 @@ class ThemeManager {
           backgroundColor: WidgetStatePropertyAll(AppColors.mainBlue),
           textStyle: WidgetStatePropertyAll(
             TextStyle(color: Colors.white),
+          ),
+        ),
+      );
+
+  static OutlinedButtonThemeData _outlinedButtonTheme() =>
+      OutlinedButtonThemeData(
+        style: ButtonStyle(
+          textStyle: WidgetStatePropertyAll(
+            AppTextStyles.button14BlueSemiBold,
+          ),
+          side: WidgetStatePropertyAll(
+            BorderSide(color: AppColors.mainBlue, width: 1.3.w),
           ),
         ),
       );

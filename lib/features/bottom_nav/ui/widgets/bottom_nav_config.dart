@@ -3,7 +3,7 @@ import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 
-import '../../../appointments/ui/appointments_screen.dart';
+import '../../../appointments/ui/screens/appointments_screen.dart';
 import '../../../home/ui/home_screen.dart';
 import '../../../inbox/ui/screens/inbox_screen.dart';
 import '../../../profile/ui/screens/profile_screen.dart';

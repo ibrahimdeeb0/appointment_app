@@ -22,6 +22,7 @@ class AppColors {
       Color(0xFF121212); // For dark mode backgrounds
 
   static const Color red = Color(0xFFFF4C5E);
+  static const Color lightGreen = Color(0xFF22C55E);
 
   //? Text Colors
   static const Color textPrimary = darkBlue; // Primary text color

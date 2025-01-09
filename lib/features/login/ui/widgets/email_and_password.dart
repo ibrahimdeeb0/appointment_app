@@ -75,7 +75,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
               }),
               icon: Icon(
                 isObscureText ? Icons.visibility_off : Icons.visibility,
-                color: AppColors.lightGray,
+                color: AppColors.gray,
               ),
             ),
             validator: (value) {
