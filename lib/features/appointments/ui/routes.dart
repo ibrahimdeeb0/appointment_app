@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'appointments_screen.dart';
+import 'screens/appointments_screen.dart';
 
 class AppointmentRoutes {
   static const String appointmentScreen = '/appointmentScreen';

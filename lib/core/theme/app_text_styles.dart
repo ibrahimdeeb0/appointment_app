@@ -149,10 +149,28 @@ class AppTextStyles {
     fontWeight: FontWeightHelper.semiBold,
   );
 
+  static final TextStyle button12BlueSemiBold = _baseStyle.copyWith(
+    color: AppColors.mainBlue,
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.semiBold,
+  );
+
+  static final TextStyle button12WhiteSemiBold = _baseStyle.copyWith(
+    color: Colors.white,
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.semiBold,
+  );
+
   //? Custom Styles
   static final TextStyle profileTitle = _baseStyle.copyWith(
     fontSize: 20.sp,
     color: AppColors.lighterBlack,
+    fontWeight: FontWeightHelper.semiBold,
+  );
+
+  //? TabBar Text Style
+  static final TextStyle tabBarTextStyle = _baseStyle.copyWith(
+    fontSize: 14.sp,
     fontWeight: FontWeightHelper.semiBold,
   );
 }
