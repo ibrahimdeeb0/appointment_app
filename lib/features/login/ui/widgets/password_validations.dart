@@ -1,8 +1,8 @@
-import 'package:doctors_app/core/theming/colors.dart';
-import 'package:doctors_app/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/helpers/spacing.dart';
+import 'package:doctors_app/core/helpers/spacing_extension.dart';
+import 'package:doctors_app/core/theme/app_colors.dart';
+import 'package:doctors_app/core/theme/app_text_styles.dart';
 
 class PasswordValidations extends StatelessWidget {
   final bool hasLowerCase;
@@ -24,14 +24,14 @@ class PasswordValidations extends StatelessWidget {
     return Column(
       children: [
         buildValidationRow('At least 1 lowercase letter', hasLowerCase),
-        verticalSpace(2),
+        2.spacingVertical,
         buildValidationRow('At least 1 uppercase letter', hasUpperCase),
-        verticalSpace(2),
+        2.spacingVertical,
         buildValidationRow(
             'At least 1 special character', hasSpecialCharacters),
-        verticalSpace(2),
+        2.spacingVertical,
         buildValidationRow('At least 1 number', hasNumber),
-        verticalSpace(2),
+        2.spacingVertical,
         buildValidationRow('At least 8 characters long', hasMinLength),
       ],
     );
@@ -42,16 +42,16 @@ class PasswordValidations extends StatelessWidget {
       children: [
         const CircleAvatar(
           radius: 2.5,
-          backgroundColor: ColorsManager.gray,
+          backgroundColor: AppColors.gray,
         ),
-        horizontalSpace(6),
+        2.spacingVertical,
         Text(
           text,
-          style: AppTextStyles.font13DarkBlueRegular.copyWith(
+          style: AppTextStyles.body14DarkBlueRegular.copyWith(
             decoration: hasValidated ? TextDecoration.lineThrough : null,
             decorationColor: Colors.green,
             decorationThickness: 2,
-            color: hasValidated ? ColorsManager.gray : ColorsManager.darkBlue,
+            color: hasValidated ? AppColors.gray : AppColors.darkBlue,
           ),
         )
       ],

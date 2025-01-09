@@ -1,4 +1,4 @@
-import 'package:doctors_app/core/theming/styles.dart';
+import 'package:doctors_app/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -15,7 +15,7 @@ class DocLogoAndName extends StatelessWidget {
         SizedBox(height: 10.w),
         Text(
           'Docdoc',
-          style: AppTextStyles.font24BlackBold,
+          style: AppTextStyles.heading24BlackBold,
         ),
       ],
     );

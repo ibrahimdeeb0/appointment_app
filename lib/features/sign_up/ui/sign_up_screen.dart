@@ -1,12 +1,13 @@
+import 'package:doctors_app/core/helpers/spacing_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:doctors_app/features/sign_up/ui/widgets/sign_up_bloc_listener.dart';
-import 'package:doctors_app/features/sign_up/ui/widgets/sign_up_form.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/helpers/spacing.dart';
-import '../../../core/theming/styles.dart';
-import '../../../core/widgets/app_text_button.dart';
+import 'package:doctors_app/core/widgets/app_text_button.dart';
+import 'package:doctors_app/core/theme/app_text_styles.dart';
+import 'package:doctors_app/features/sign_up/ui/widgets/sign_up_bloc_listener.dart';
+import 'package:doctors_app/features/sign_up/ui/widgets/sign_up_form.dart';
+
 import '../logic/sign_up_cubit.dart';
 import 'widgets/already_have_account_text.dart';
 import 'widgets/terms_and_conditions_text.dart';
@@ -26,28 +27,28 @@ class SignupScreen extends StatelessWidget {
               children: [
                 Text(
                   'Create Account',
-                  style: AppTextStyles.font24BlueBold,
+                  style: AppTextStyles.heading24BlueBold,
                 ),
-                verticalSpace(8),
+                8.spacingVertical,
                 Text(
                   'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
-                  style: AppTextStyles.font14GrayRegular,
+                  style: AppTextStyles.body14GrayRegular,
                 ),
-                verticalSpace(36),
+                36.spacingVertical,
                 Column(
                   children: [
                     const SignupForm(),
-                    verticalSpace(40),
+                    40.spacingVertical,
                     AppTextButton(
                       buttonText: "Create Account",
-                      textStyle: AppTextStyles.font16WhiteSemiBold,
+                      textStyle: AppTextStyles.button16WhiteSemiBold,
                       onPressed: () {
                         validateThenDoSignup(context);
                       },
                     ),
-                    verticalSpace(16),
+                    16.spacingVertical,
                     const TermsAndConditionsText(),
-                    verticalSpace(30),
+                    30.spacingVertical,
                     const AlreadyHaveAccountText(),
                     const SignupBlocListener(),
                   ],

@@ -1,12 +1,13 @@
-import 'package:doctors_app/core/helpers/app_regex.dart';
-import 'package:doctors_app/core/helpers/spacing.dart';
-import 'package:doctors_app/core/theming/colors.dart';
-import 'package:doctors_app/features/login/logic/cubit/login_cubit.dart';
-import 'package:doctors_app/features/login/ui/widgets/password_validations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/widgets/app_text_form_field.dart';
+import 'package:doctors_app/core/helpers/app_regex.dart';
+import 'package:doctors_app/core/widgets/app_text_form_field.dart';
+import 'package:doctors_app/core/helpers/spacing_extension.dart';
+import 'package:doctors_app/core/theme/app_colors.dart';
+
+import '../../logic/cubit/login_cubit.dart';
+import 'password_validations.dart';
 
 class EmailAndPassword extends StatefulWidget {
   const EmailAndPassword({super.key});
@@ -63,7 +64,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
               }
             },
           ),
-          verticalSpace(18),
+          18.spacingVertical,
           AppTextFormField(
             hintText: 'Password',
             controller: context.read<LoginCubit>().passwordController,
@@ -74,7 +75,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
               }),
               icon: Icon(
                 isObscureText ? Icons.visibility_off : Icons.visibility,
-                color: ColorsManager.lightGray,
+                color: AppColors.gray,
               ),
             ),
             validator: (value) {
@@ -83,7 +84,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
               }
             },
           ),
-          verticalSpace(24),
+          24.spacingVertical,
           PasswordValidations(
             hasLowerCase: hasLowercase,
             hasUpperCase: hasUppercase,

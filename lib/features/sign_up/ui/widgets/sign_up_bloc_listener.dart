@@ -1,11 +1,12 @@
+import 'package:doctors_app/core/networking/api_error_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:doctors_app/core/helpers/extensions.dart';
 import 'package:doctors_app/features/sign_up/logic/sign_up_cubit.dart';
 
-import '../../../../core/routing/routes.dart';
-import '../../../../core/theming/colors.dart';
-import '../../../../core/theming/styles.dart';
+import '../../../../core/theme/app_colors.dart';
+import '../../../../core/theme/app_text_styles.dart';
+import '../../../login/ui/routes.dart';
 import '../../logic/sign_up_state.dart';
 
 class SignupBlocListener extends StatelessWidget {
@@ -25,7 +26,7 @@ class SignupBlocListener extends StatelessWidget {
               context: context,
               builder: (context) => const Center(
                 child: CircularProgressIndicator(
-                  color: ColorsManager.mainBlue,
+                  color: AppColors.mainBlue,
                 ),
               ),
             );
@@ -34,8 +35,8 @@ class SignupBlocListener extends StatelessWidget {
             context.pop();
             showSuccessDialog(context);
           },
-          signupError: (error) {
-            setupErrorState(context, error);
+          signupError: (apiErrorModel) {
+            setupErrorState(context, apiErrorModel);
           },
         );
       },
@@ -64,7 +65,7 @@ class SignupBlocListener extends StatelessWidget {
                 disabledForegroundColor: Colors.grey.withOpacity(0.38),
               ),
               onPressed: () {
-                context.pushNamed(Routes.loginScreen);
+                context.pushReplacementNamed(LoginRoutes.login);
               },
               child: const Text('Continue'),
             ),
@@ -74,7 +75,7 @@ class SignupBlocListener extends StatelessWidget {
     );
   }
 
-  void setupErrorState(BuildContext context, String error) {
+  void setupErrorState(BuildContext context, ApiErrorModel apiErrorModel) {
     context.pop();
     showDialog(
       context: context,
@@ -85,8 +86,8 @@ class SignupBlocListener extends StatelessWidget {
           size: 32,
         ),
         content: Text(
-          error,
-          style: AppTextStyles.font15DarkBlueMedium,
+          apiErrorModel.getAllErrorMessages(),
+          style: AppTextStyles.body14DarkBlueBold,
         ),
         actions: [
           TextButton(
@@ -95,7 +96,7 @@ class SignupBlocListener extends StatelessWidget {
             },
             child: Text(
               'Got it',
-              style: AppTextStyles.font14BlueSemiBold,
+              style: AppTextStyles.button14BlueSemiBold,
             ),
           ),
         ],

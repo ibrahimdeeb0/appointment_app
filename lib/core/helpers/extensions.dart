@@ -10,6 +10,10 @@ extension Navigation on BuildContext {
         .pushReplacementNamed(routeName, arguments: arguments);
   }
 
+  Future<dynamic> popAndPushNamed(String routeName, {Object? arguments}) {
+    return Navigator.of(this).popAndPushNamed(routeName, arguments: arguments);
+  }
+
   Future<dynamic> name(String routeName,
       {Object? arguments, required RoutePredicate predicate}) {
     return Navigator.pushNamedAndRemoveUntil(
@@ -23,7 +27,20 @@ extension Navigation on BuildContext {
   void pop() => Navigator.pop(this);
 }
 
-extension Sizing on BuildContext {
-  double flexHeight() => MediaQuery.sizeOf(this).height;
-  double flexWidth() => MediaQuery.sizeOf(this).width;
+extension StringExtension on String? {
+  bool isNullOrEmpty() => this == null || this == "";
+}
+
+extension ListExtension<T> on List<T>? {
+  bool isNullOrEmpty() => this == null || this!.isEmpty;
+}
+
+extension MapExtension<K, V> on Map<K, V>? {
+  bool isNullOrEmpty() => this == null || this!.isEmpty;
+}
+
+extension ContextExt on BuildContext {
+  bool get isDarkMode {
+    return Theme.of(this).brightness == Brightness.dark;
+  }
 }
